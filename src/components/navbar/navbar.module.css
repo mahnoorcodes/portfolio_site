@@ -4,10 +4,11 @@
     align-items: center;
     height: 80px;
     padding: 15px 25px;
-    background-color: var(--color-secondary);
+    background-color: #27224b;
     position: fixed;    
     top:0;
-    width:100%
+    width:100%;
+    z-index: 1000;
 }
 .navbarLink{
     display: flex;

@@ -21,7 +21,7 @@
     flex-wrap:wrap;
     justify-content: left;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background-color:var(--color-translucent);
     border-radius:2rem;
     border: 2px solid white;
     backdrop-filter: blur(10px);
@@ -43,9 +43,10 @@
 }
 .heroContainer{
     display:flex;
+    position: relative;
     padding: 2.5rem;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-translucent);
     border-radius:2rem;
     border: 2px solid white;
@@ -55,38 +56,54 @@
     max-width: 50%;
     width: 500px;
     height: 350px;
-    margin: 5.5rem auto;
-    position: relative;
+    margin: 4.5rem auto;
+    gap:2rem;
     box-sizing: border-box;
     transform: translateX(6rem);
 }
 .heroTitle{
+    position: relative;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 1rem;
     margin-bottom: 0.5rem;
-    position: relative;
     z-index:1;
+}
+.heroTitle::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    margin-top: 1.0rem;
 }
 .heroDescription{
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     line-height:1.5;
     word-spacing: 0.3rem;
 }
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .heroImage {
     position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
+    top: 2rem;
+    right: 2rem;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    padding:0.3rem;
-    margin:0;
+    padding:0.4rem;
+    margin-left:auto;
+    margin-bottom:1rem;
     box-sizing: border-box;
     background-color: var(--color-primary);
+    z-index:1;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 .heroImage:hover {
     animation: flip 2s linear;
@@ -99,5 +116,47 @@
         transform: rotateY(360deg);
     }
 }
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.heroTitle, .heroDescription {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+    to {
+    opacity: 1;
+    }
+}
 
-@media (max-width: 1024px) {}
+@media screen and (max-width: 830px){
+    .heroSection{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        align-items:center;
+    }
+    .heroContainer{
+        max-width: 90%;
+        width: 100%;
+        height: auto;
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+    .iconBox{
+        margin-left:0;
+        margin-top:2rem;
+    }
+    .heroImage {
+        width: 120px;
+        height: 120px;
+    }
+}
