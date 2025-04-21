@@ -1,0 +1,103 @@
+.heroSection{
+    display:flex;
+    justify-content:space-between;
+    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%);
+    color: var(--color-text); 
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.icon {
+    font-size: 2.5rem; 
+    margin: 1rem;
+}
+.iconBox{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 1.5rem;
+    gap: 1.5rem;
+    margin:4rem 0;
+    margin-left:4rem;
+    flex-wrap:wrap;
+    justify-content: left;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius:2rem;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+    width:fit-content;   
+}
+.iconLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-weight:500;
+    color: var(--color-text);
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+.iconLink:hover {
+    transform: scale(1.2);
+    color: var(--color-primary);
+}
+.heroContainer{
+    display:flex;
+    padding: 2.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--color-translucent);
+    border-radius:2rem;
+    border: 2px solid white;
+    backdrop-filter: blur(10px); 
+    color: var(--color-text);
+    flex-direction: column;
+    max-width: 50%;
+    width: 500px;
+    height: 350px;
+    margin: 5.5rem auto;
+    position: relative;
+    box-sizing: border-box;
+    transform: translateX(6rem);
+}
+.heroTitle{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index:1;
+}
+.heroDescription{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height:1.5;
+    word-spacing: 0.3rem;
+}
+.heroImage {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding:0.3rem;
+    margin:0;
+    box-sizing: border-box;
+    background-color: var(--color-primary);
+}
+.heroImage:hover {
+    animation: flip 2s linear;
+}
+@keyframes flip {
+    50%{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 1024px) {}
