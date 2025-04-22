@@ -1,41 +1,37 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 15px 25px;
+    padding: 0 2rem;
     background-color: #27224b;
-    position: fixed;    
-    top:0;
-    width:100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
-.navbarLink{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbarLink {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 800;
     font-size: 1.5rem;
-    padding-left:4rem;
 }
-.navbarLinks{
+.navbarLinks {
     display: flex;
+    gap: 2rem; 
 }
 .navbarLinks a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
     color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
     transition: color 0.3s ease;
 }
 .navbarLinks a:hover {
-    color: var(--color-primary) 
+    color: var(--color-primary);
 }
+
 .menuIcon {
     display:none;
     color: var(--color-text);

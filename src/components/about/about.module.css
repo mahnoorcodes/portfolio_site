@@ -1,32 +1,28 @@
-.aboutSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: var(--color-text);
-    scroll-margin-top:80px ;
-    min-height:100vh;
-}
-.aboutTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.aboutSection {
+    text-align: center;
+    z-index:1;
+    border: 2px dashed red;
+    scroll-margin-top: 80px;
+} 
+
+.aboutTitle {
     color: var(--color-primary);
     font-weight: 800;
-    font-size: 1.5rem;
-    padding-top:2rem;
+    font-size: 1.3rem;
+    margin-top:2rem
 }
-.aboutContent{
-    display: flex;
+
+.aboutContent {
     text-align: center;
-    justify-content: center;
-    max-width: 600px;
-    color: var(--color-background);
-    font-weight: 500;
-    font-size: 1.2rem;
+    max-width: 700px;
+    width:100%;
     padding: 2rem;
+    font-size: 1.2rem;
     line-height: 1.8;
+    color: var(--color-background);
 }
+
+
 .smileIcon{
     font-size: 1.5rem; 
     color: var(--color-primary);
