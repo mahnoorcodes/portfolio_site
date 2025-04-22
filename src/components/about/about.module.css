@@ -1,27 +1,24 @@
 .aboutSection {
+    position:relative;
     text-align: center;
     z-index:1;
-    border: 2px dashed red;
-    scroll-margin-top: 80px;
+    padding:1rem;
 } 
 
 .aboutTitle {
     color: var(--color-primary);
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-top:2rem
 }
 
 .aboutContent {
-    text-align: center;
-    max-width: 700px;
-    width:100%;
-    padding: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--color-background);
+    color:var(--color-background);
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2rem;
 }
-
 
 .smileIcon{
     font-size: 1.5rem; 

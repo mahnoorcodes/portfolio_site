@@ -10,19 +10,29 @@ export const Navbar = () => {
     };
 
     return(
-        <nav className={styles.navbar} id="navbar">
+        <nav className={styles.navbar}>
             <div className={styles.logoContainer}>
-                <a href="/" className={styles.navbarLink}>MAHNOOR FAISAL</a>
+                <a href="/" className={styles.navbarTitle}>MAHNOOR FAISAL</a>
                 <FontAwesomeIcon icon={faBars} className={styles.menuIcon} onClick= {toggleMenu} alt="menu" />
             </div>
 
-            <nav className={`${styles.navbarLinks} ${menuOpen ? styles.show : ''}`}>
-                <a href="#about">ABOUT</a>
-                <a href="#projects">PROJECTS</a>
-                <a href="#skills">SKILLS</a>
+            <ul className={`${styles.navbarMenu} ${menuOpen ? styles.show : ''}`}>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
                 <a href="#cv">CV</a>
-                <a href="#contact">CONTACT ME</a>
-            </nav>
+            </li>
+            <li>
+                <a href="#contact">Contact Me</a>
+            </li>
+            </ul>
         </nav>
     );
 };

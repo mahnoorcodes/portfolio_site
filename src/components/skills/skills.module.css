@@ -1,9 +1,66 @@
 .skillsSection{
-    display:flex;
+    position:relative;
+    text-align: center;
+    z-index:1;
+    padding: 1rem;
+    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
 }
-.skillsTitle{
-    font-size: 1.3rem;
+.title{
+    font-size: 1.5rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-top:2rem;
     color: var(--color-primary);
 }
+.categoryBox {
+    margin-bottom: 2rem;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items:center; 
+}
+
+.categoryTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.stackItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.techItem {
+    background-color: var(--color-translucent);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    font-weight: 500;
+}
+.techstackBoxes {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); /* Two columns */
+    gap: 2rem;
+    padding: 1rem;
+    justify-content:center 
+}
+.certificateSection {
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+    color: var(--color-text);
+}
+.card {
+    padding: 1rem;
+}
+.image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+

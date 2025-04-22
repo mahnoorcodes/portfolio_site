@@ -1,11 +1,31 @@
-[    
-    {
-        "title":"React"
-    },
-    {
-        "title":"JavaScript"
-    },
-    {
-
-    }
+{
+"Languages": [
+    { "title": "JavaScript" },
+    { "title": "Java" },
+    { "title": "Python" },
+    { "title": "C#" },
+    { "title": "PHP" }
+],
+"Frameworks_and_Platforms": [
+    { "title": "Node.js" },
+    { "title": "ASP.NET" },
+    { "title": "Firebase" },
+    { "title": "Expo Go" }
+],
+"Databases": [
+    { "title": "MSSQL" },
+    { "title": "SQLDeveloper" },
+    { "title": "Firebase" }
+],
+"AI_and_Assistants": [
+    { "title": "ChatGPT" },
+    { "title": "GitHub Copilot" }
+],
+"Tools_and_IDEs": [
+    { "title": "VSCode" },
+    { "title": "Android Studio" },
+    { "title": "Excel" },
+    { "title": "Photoshop" },
+    { "title": "Figma" }
 ]
+}
