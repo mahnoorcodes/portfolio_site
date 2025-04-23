@@ -1,15 +1,15 @@
 .aboutSection {
-    position:relative;
+    position: relative;
     text-align: center;
-    z-index:1;
-    padding:1rem;
-} 
+    z-index: 1;
+    margin:2rem;
+}
 
 .aboutTitle {
     color: var(--color-primary);
     font-weight: 800;
     font-size: 1.5rem;
-    margin-top:2rem
+    margin-bottom: 2rem;
 }
 
 .aboutContent {

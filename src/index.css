@@ -3,7 +3,11 @@
     margin: 0;
     padding: 0;
     font-family: "Outfit", Arial, Helvetica, sans-serif;
+    
 }
-html {
+html{
     scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 80px;
 }

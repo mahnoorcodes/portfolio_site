@@ -41,6 +41,7 @@
 .iconLink:hover {
     transform: scale(1.2);
     color: var(--color-primary);
+    cursor:pointer
 }
 .heroContainer{
     display:flex;

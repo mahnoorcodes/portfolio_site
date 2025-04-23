@@ -4,31 +4,31 @@ import heroImage from '../../assets/hero.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser, faFolderOpen, faFileLines, faFileCode, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
-export const Hero = () => {
+export const Hero = ({ onScrollTo, refs }) => {
   return (   
       <section id="hero" className={styles.heroSection}>
-        <div className={styles.iconBox}>
-          <a href="#about" className={styles.iconLink} id="about">
+        <ul className={styles.iconBox}>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.aboutRef)}>
             <FontAwesomeIcon icon={faCircleUser} className={styles.icon} />
             <span>aboutme.txt</span>
-          </a>
-          <a href="#projects" className={styles.iconLink} id="projects">
+          </li>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.projectsRef)}>
             <FontAwesomeIcon icon={faFolderOpen} className={styles.icon} />
             <span>projects</span>
-          </a>
-          <a href="#skills" className={styles.iconLink} id="skills">
+          </li>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.skillsRef)}>
             <FontAwesomeIcon icon={faFileLines} className={styles.icon} />
             <span>myskills.txt</span>
-          </a>
-          <a href="#skills" className={styles.iconLink} id="skills">
+          </li>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.skillsRef)}>
             <FontAwesomeIcon icon={faFileCode} className={styles.icon} />
             <span>techstack.doc</span>
-          </a>
-          <a href="#cv" className={styles.iconLink} id="cv">
+          </li>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.cvRef)}>
             <FontAwesomeIcon icon={faFilePdf} className={styles.icon} />
             <span>cv-resume.pdf</span>
-          </a>
-        </div>
+          </li>
+        </ul>
 
         <div className={styles.heroContainer}>
         <div className={styles.heroText}>

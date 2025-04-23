@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 0 2rem;
+    padding: 0 4rem;
     background-color: #27224b;
     position: fixed;
     top: 0;
@@ -16,12 +16,17 @@
     text-decoration: none;
     font-weight: 800;
     font-size: 1.5rem;
+    list-style: none;
+}
+.navbarTitle:hover {
+    cursor: pointer;
 }
 .navbarMenu {
     display: flex;
     gap: 2rem; 
+    list-style: none;
 }
-.navbarMenu a {
+.navbarMenu li {
     color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
@@ -29,8 +34,9 @@
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
 }
-.navbarMenu a:hover {
+.navbarMenu li:hover {
     color: var(--color-primary);
+    cursor:pointer
 }
 
 .menuIcon {
