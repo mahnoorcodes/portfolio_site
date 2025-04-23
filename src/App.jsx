@@ -5,13 +5,16 @@ import { Hero } from './components/hero/Hero.jsx';
 import { About } from './components/about/About.jsx';
 import { Skills } from './components/skills/Skills.jsx';
 import { Projects } from './components/projects/Projects.jsx';
+// import {CV} from './components/cv/CV.jsx';
+// import { Contact } from './components/contact/Contact.jsx';
+// import { Footer } from './components/footer/Footer.jsx';
 
 function App() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const cvRef = useRef(null);
-  const contactmeRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -21,9 +24,9 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <Navbar onScrollTo={scrollToSection} refs={{ aboutRef, skillsRef , projectsRef, cvRef, contactmeRef}} />
+      <Navbar onScrollTo={scrollToSection} refs={{ aboutRef, skillsRef , projectsRef, cvRef, contactRef}} />
 
-      <Hero />
+      <Hero onScrollTo={scrollToSection} refs={{aboutRef, skillsRef , projectsRef, cvRef, contactRef}} />
       
       <section ref={aboutRef} id="about">
         <About />
