@@ -1,0 +1,23 @@
+.contactSection{
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    background: #27224b;
+    padding: 2rem;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 2rem;
+    color: var(--color-primary);
+}
+.contactContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    color:var(--color-text)
+}

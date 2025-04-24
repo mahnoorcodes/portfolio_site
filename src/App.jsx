@@ -5,8 +5,8 @@ import { Hero } from './components/hero/Hero.jsx';
 import { About } from './components/about/About.jsx';
 import { Skills } from './components/skills/Skills.jsx';
 import { Projects } from './components/projects/Projects.jsx';
-// import {CV} from './components/cv/CV.jsx';
-// import { Contact } from './components/contact/Contact.jsx';
+import {Cv} from './components/cv/Cv.jsx';
+import { Contact } from './components/contact/Contact.jsx';
 // import { Footer } from './components/footer/Footer.jsx';
 
 function App() {
@@ -40,8 +40,14 @@ function App() {
         <Projects />
       </section>
 
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <section ref={cvRef} id="cv">
+        <Cv />
+      </section>
+
+      <section ref={contactRef} id="contact">
+        <Contact />
+      </section>
+
     </div>
   );
 }

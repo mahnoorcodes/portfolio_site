@@ -1,0 +1,45 @@
+.cvSection{
+    position:relative;
+    text-align: center;
+    z-index:1;
+    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
+    padding:2rem
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top:2rem;
+    color: var(--color-primary);
+}
+.cvContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    color:var(--color-text)
+    
+}
+.cvLink{
+    background-color: var(--color-translucent);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    font-weight: 500;
+}
+.cvLink a {
+    color: var(--color-primary); 
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+.cvLink a:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    padding: 2px 6px;
+    border-radius: 6px;
+    text-decoration: none;
+}
