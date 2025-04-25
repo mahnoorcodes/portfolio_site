@@ -6,7 +6,7 @@ export const ProjectsCard = ({
 }) => {
     return (
         <div className={styles.projectCard}>
-            <img src={imageSrc} alt={title} className={styles.image} />
+            <img src={`${import.meta.env.BASE_URL}${imageSrc}`} alt={title} className={styles.image} />
             <div className={styles.cardContent}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
