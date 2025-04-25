@@ -25,7 +25,7 @@ export const Navbar = ({ onScrollTo, refs }) => {
                 <li onClick={() => onScrollTo(refs.skillsRef)}>Skills</li>
                 <li onClick={() => onScrollTo(refs.projectsRef)}>Projects</li>
                 <li onClick={() => onScrollTo(refs.cvRef)}>CV</li>
-                <li onClick={() => onScrollTo(refs.contactmeRef)}>Contact Me</li>
+                <li onClick={() => onScrollTo(refs.contactRef)}>Contact Me</li>
             </ul>
         </nav>
     );

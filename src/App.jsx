@@ -7,7 +7,6 @@ import { Skills } from './components/skills/Skills.jsx';
 import { Projects } from './components/projects/Projects.jsx';
 import {Cv} from './components/cv/Cv.jsx';
 import { Contact } from './components/contact/Contact.jsx';
-// import { Footer } from './components/footer/Footer.jsx';
 
 function App() {
   const aboutRef = useRef(null);
