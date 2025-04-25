@@ -1,7 +1,7 @@
 [
     {
         "title": "SupportSpace- A Mental Health Support App",
-        "imageSrc": "/assets2/supportspace.png",
+        "imageSrc": "supportspace",
         "description": "SupportSpace is a mobile mental health support application designed to provide users with accessible and personalised emotional support through advanced technology. This application has multiple features ranging from a personal journal to a mood tracker. It leverages SQLite for offline storage and Google Firebase for secure backend services.",
         "skills": ["React Native","JavaScript","HTML", "CSS","Firebase","SQLite","ExpoGo"],
         "githubLink": "https://github.com/mahnoorcodes/L6_supportspace_app",
@@ -9,14 +9,14 @@
     },
     {
         "title": "TaskMate- A Task Tracker App",
-        "imageSrc": "/assets2/taskmate.png",
+        "imageSrc": "taskmate",
         "description": "TaskMate is an Android mobile app where users can create, manage, and track their tasks efficiently. The app features a user-friendly interface and uses SQLite for local data storage.",
         "skills": ["Java","XML", "CSS","SQLite"],
         "githubLink": "https://github.com/mahnoorcodes/todoapp"
     },
     {
         "title": "MarketNet- A WebApp for Managing Employee Details",
-        "imageSrc": "/assets2/marketnet.jpg",
+        "imageSrc": "marketnet",
         "description": "MarketNet is a webapp project for logging in and searching employee details in 2 departments. Only admins of Human Resources and Marketing (E001 and E002) can login and all details are stored in a MySQL database.",
         "skills": ["C#","ASP.NET","HTML", "CSS", "SQL"],
         "githubLink": "https://github.com/mahnoorcodes/marketnet-project"
