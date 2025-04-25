@@ -10,7 +10,6 @@ export const ProjectsCard = ({
             <div className={styles.cardContent}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
-                {/* <span >Skills:</span> */}
                     <ul className={styles.skills}>
                         {skills.map((skill, id) => (
                             <li key={id} className={styles.skill}>{skill}</li>
