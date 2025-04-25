@@ -1,21 +1,12 @@
 import React from 'react';
 import styles from './projects.module.css'
-import supportspaceImg from '../../assets/supportspace.png';
-import taskmateImg from '../../assets/taskmate.png';
-import marketnetImg from '../../assets/marketnet.jpg';
-
-const imageMap = {
-    'supportspace.png': supportspaceImg,
-    'taskmate.png': taskmateImg,
-    'marketnet.jpg': marketnetImg,
-};
 
 export const ProjectsCard = ({
     title, imageSrc, description, skills, githubLink, liveDemo
 }) => {
     return (
         <div className={styles.projectCard}>
-            <img src={imageMap[imageSrc]} alt={title} className={styles.image} />
+            <img src={`/projImg/${imageSrc}`} alt={title} className={styles.image} />
             <div className={styles.cardContent}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
