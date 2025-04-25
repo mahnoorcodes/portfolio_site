@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './projects.module.css'
-import supportspaceImg from '/src/assets/supportspace.png';
-import taskmateImg from '/src/assets/taskmate.png';
-import marketnetImg from '/src/assets/marketnet.jpg';
+import supportspaceImg from '../../assets/supportspace.png';
+import taskmateImg from '../../assets/taskmate.png';
+import marketnetImg from '../../assets/marketnet.jpg';
 
 const imageMap = {
     supportspace: supportspaceImg,
