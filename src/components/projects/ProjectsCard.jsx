@@ -5,9 +5,9 @@ import taskmateImg from '../../assets/taskmate.png';
 import marketnetImg from '../../assets/marketnet.jpg';
 
 const imageMap = {
-    supportspace: supportspaceImg,
-    taskmate: taskmateImg,
-    marketnet: marketnetImg,
+    'supportspace.png': supportspaceImg,
+    'taskmate.png': taskmateImg,
+    'marketnet.jpg': marketnetImg,
 };
 
 export const ProjectsCard = ({
