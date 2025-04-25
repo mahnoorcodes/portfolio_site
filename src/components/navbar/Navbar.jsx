@@ -9,23 +9,26 @@ export const Navbar = ({ onScrollTo, refs }) => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-    
+    const handleNavClick = (scrollToRef) => {
+        onScrollTo(scrollToRef); 
+        setMenuOpen(false); 
+    };
 
     return(
         <nav className={styles.navbar}>
             <div className={styles.logoContainer}>
-            <li className={styles.navbarTitle} onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });window.history.pushState("", document.title, window.location.pathname);}}>
-                MAHNOOR FAISAL
-            </li>
-                <FontAwesomeIcon icon={faBars} className={styles.menuIcon} onClick= {toggleMenu} alt="menu" />
+                <li className={styles.navbarTitle} onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });window.history.pushState("", document.title, window.location.pathname);}}>
+                    MAHNOOR FAISAL
+                </li>
             </div>
+                <FontAwesomeIcon icon={faBars} className={styles.menuIcon} onClick= {toggleMenu} alt="menu" />
 
             <ul className={`${styles.navbarMenu} ${menuOpen ? styles.show : ''}`}>
-                <li onClick={() => onScrollTo(refs.aboutRef)}>About</li>
-                <li onClick={() => onScrollTo(refs.skillsRef)}>Skills</li>
-                <li onClick={() => onScrollTo(refs.projectsRef)}>Projects</li>
-                <li onClick={() => onScrollTo(refs.cvRef)}>CV</li>
-                <li onClick={() => onScrollTo(refs.contactRef)}>Contact Me</li>
+                <li onClick={() => handleNavClick(refs.aboutRef)}>About</li>
+                <li onClick={() => handleNavClick(refs.skillsRef)}>Skills</li>
+                <li onClick={() => handleNavClick(refs.projectsRef)}>Projects</li>
+                <li onClick={() => handleNavClick(refs.cvRef)}>CV</li>
+                <li onClick={() => handleNavClick(refs.contactRef)}>Contact Me</li>
             </ul>
         </nav>
     );

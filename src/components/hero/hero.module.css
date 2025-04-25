@@ -1,14 +1,18 @@
 .heroSection{
     display:flex;
-    justify-content:space-between;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem; 
     background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%);
     /* background-size: 200% 200%; 
-    animation: gradientMove 6s infinite alternate;  */
+    animation: gradientMove 6s infinite alternate;
     color: var(--color-text); 
     padding-top: 80px;
     padding-left: 1rem;
     padding-right: 1rem;
-    min-height: 100vh;
+    min-height: 100vh;*/
 }
 /* @keyframes gradientMove {
     0% {
@@ -28,12 +32,11 @@
 .iconBox{
     display:grid;
     grid-template-columns: repeat(2, 1fr); 
-    padding: 1.5rem;
+    padding: 2.5rem;
     gap: 1.5rem;
-    margin:4rem 0;
-    margin-left:4rem;
+    margin: 0 auto;
     flex-wrap:wrap;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background-color:var(--color-translucent);
     border-radius:2rem;
@@ -68,13 +71,11 @@
     backdrop-filter: blur(10px); 
     color: var(--color-text);
     flex-direction: column;
-    max-width: 50%;
-    width: 500px;
-    height: 350px;
-    margin: 4.5rem auto;
-    gap:2rem;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     box-sizing: border-box;
-    transform: translateX(6rem);
 }
 .heroTitle{
     position: relative;
@@ -106,8 +107,8 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     padding:0.4rem;
     margin-left:auto;
@@ -152,26 +153,39 @@
     }
 }
 
-@media screen and (max-width: 830px){
-    .heroSection{
-        flex-direction: column-reverse;
-        padding: 0;
-        margin: 0;
-        align-items:center;
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .heroSection {
+        flex-direction: column; 
+        padding-top: 6.5rem;
+        padding-bottom: 2rem;
     }
-    .heroContainer{
-        max-width: 90%;
-        width: 100%;
-        height: auto;
-        margin: 2rem auto;
+
+    .iconBox {
+        display: none; 
+    }
+
+    .heroContainer {
+        max-width: 90%; 
         padding: 1.5rem;
+        transform: none; 
     }
-    .iconBox{
-        margin-left:0;
-        margin-top:2rem;
+
+    .heroTitle {
+        font-size: 1.5rem; 
     }
+
+    .heroDescription {
+        font-size: 1rem; 
+        text-align: center; 
+    }
+
     .heroImage {
-        width: 120px;
-        height: 120px;
+        position: relative; 
+        top: 0;
+        right: 0;
+        width: 125px; 
+        height: 125px;
+        margin: 1rem auto; 
     }
 }

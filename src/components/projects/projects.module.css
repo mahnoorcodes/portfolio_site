@@ -98,14 +98,42 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
-    .projects {
-    grid-template-columns: repeat(2, 1fr); 
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .projectCard {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
-}
 
-@media screen and (max-width: 600px) {
-    .projects {
-    grid-template-columns: 1fr; 
+    .image {
+        width: 100%; 
+        height: 50; 
+        margin-bottom: 1rem; 
+    }
+
+    .cardContent {
+        align-items: center; 
+        text-align: center;
+    }
+
+    .description {
+        text-align: center; 
+        margin: 1rem 0; 
+    }
+
+    .skills {
+        justify-content: center; 
+    }
+
+    .links {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 1rem; 
+    }
+
+    .link {
+        width: 100%; 
+        text-align: center; 
     }
 }

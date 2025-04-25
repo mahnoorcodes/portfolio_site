@@ -64,4 +64,17 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
 }
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .techItem {
+        padding: 0.5rem 0.75rem; 
+        font-size: 0.9rem; 
+        width: 100%; 
+        text-align: center; 
+    }
 
+    .techstackBoxes {
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+    }
+}
