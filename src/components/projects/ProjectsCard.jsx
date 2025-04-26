@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './projects.module.css'
 
 export const ProjectsCard = ({
-    title, imageSrc, description, skills, githubLink, liveDemo
+    title, imageSrc, description, skills, githubLink,liveDemo
 }) => {
     return (
         <div className={styles.projectCard}>
