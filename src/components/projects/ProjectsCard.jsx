@@ -10,6 +10,16 @@ export const ProjectsCard = ({
                 e.target.onerror = null; 
                 e.target.src = `${import.meta.env.BASE_URL}images/default.png`; 
             }}/>
+{/* <img
+  src={imageSrc ? imageSrc : '/images/default.png'}  // Direct path or fallback
+  alt={title}
+  className={styles.image}
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = '/images/default.png';  // Fallback image
+  }}
+/> */}
+
             <div className={styles.cardContent}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
