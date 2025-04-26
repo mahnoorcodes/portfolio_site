@@ -6,7 +6,10 @@ export const ProjectsCard = ({
 }) => {
     return (
         <div className={styles.projectCard}>
-            <img src={`${import.meta.env.BASE_URL}${imageSrc}`} alt={title} className={styles.image} />
+            <img src={`${import.meta.env.BASE_URL}${imageSrc}`} alt={title} className={styles.image} onError={(e) => {
+                e.target.onerror = null; 
+                e.target.src = `${import.meta.env.BASE_URL}images/default.png`; 
+            }}/>
             <div className={styles.cardContent}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
