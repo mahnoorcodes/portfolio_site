@@ -20,5 +20,13 @@
         "description": "MarketNet is a webapp project for logging in and searching employee details in 2 departments. Only admins of Human Resources and Marketing (E001 and E002) can login and all details are stored in a MySQL database.",
         "skills": ["C#", "ASP.NET", "HTML", "CSS", "SQL"],
         "githubLink": "https://github.com/mahnoorcodes/marketnet-project"
+    },
+    {
+        "title": "My Portfolio Website",
+        "imageSrc": "images/portfolio.png",
+        "description": "This is my personal portfolio website, built using React and Vite. It showcases my projects, skills, and experience in a visually appealing manner.",
+        "skills": ["React", "Vite", "JavaScript", "HTML", "CSS"],
+        "githubLink": "https://github.com/mahnoorcodes/portfolio_site ",
+        "liveDemo": "https://portfolio-mahnoor-faisal.vercel.app/" 
     }
 ]
