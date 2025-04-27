@@ -7,9 +7,10 @@
     { "title": "PHP" }
 ],
 "Frameworks_and_Platforms": [
+    { "title": "React" },
+    { "title": "React Native" },
     { "title": "Node.js" },
     { "title": "ASP.NET" },
-    { "title": "Firebase" },
     { "title": "Expo Go" }
 ],
 "Databases": [
