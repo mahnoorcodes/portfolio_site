@@ -8,6 +8,7 @@ import gamedesigncert from '../../assets/gamedesigncert.jpg';
 import creativewritingcert from '../../assets/creativewritingcert.jpg';
 import onemillcert from '../../assets/onemillcert.jpg';
 import pythcert from '../../assets/pythcert.jpg';
+import figmacert from '../../assets/figmacert.jpg'
 
 const certificates = [
     {
@@ -29,6 +30,11 @@ const certificates = [
         title: "Learning Python (2021)- LinkedIn Learning",
         date:"Issued Apr  2025",
         image: pythcert
+    },
+    {
+        title: "Figma for UX Design ",
+        date:"Issued May  2025",
+        image: figmacert
     },
 ];
 const sliderSettings = {
