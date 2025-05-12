@@ -6,7 +6,7 @@ const timelineData = [
         title: 'Freelance Web Designer and Developer',
         company: 'Upwork- Remote',
         date: 'May 2025 – Present',
-        description: 'Designed modern, accessible websites for small businesses using Figma and Webflow.'
+        description: 'Designed modern, accessible websites for small businesses using Figma, GoDaddy and WordPress.'
     }
 ];
 
