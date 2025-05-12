@@ -7,6 +7,7 @@ import { Skills } from './components/skills/Skills.jsx';
 import { Projects } from './components/projects/Projects.jsx';
 import {Cv} from './components/cv/Cv.jsx';
 import { Contact } from './components/contact/Contact.jsx';
+import {Experience} from './components/experience/Experience.jsx';
 
 function App() {
   const aboutRef = useRef(null);
@@ -14,6 +15,7 @@ function App() {
   const projectsRef = useRef(null);
   const cvRef = useRef(null);
   const contactRef = useRef(null);
+  const experienceRef = useRef(null);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -23,9 +25,9 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <Navbar onScrollTo={scrollToSection} refs={{ aboutRef, skillsRef , projectsRef, cvRef, contactRef}} />
+      <Navbar onScrollTo={scrollToSection} refs={{ aboutRef, skillsRef , projectsRef, cvRef, contactRef, experienceRef}} />
 
-      <Hero onScrollTo={scrollToSection} refs={{aboutRef, skillsRef , projectsRef, cvRef, contactRef}} />
+      <Hero onScrollTo={scrollToSection} refs={{aboutRef, skillsRef , projectsRef, cvRef, contactRef, experienceRef}} />
       
       <section ref={aboutRef} id="about">
         <About />
@@ -35,6 +37,10 @@ function App() {
         <Skills />
       </section>
 
+      <section ref={experienceRef} id="experience">
+        <Experience />
+      </section>
+      
       <section ref={projectsRef} id="projects">
         <Projects />
       </section>

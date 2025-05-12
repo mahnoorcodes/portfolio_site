@@ -16,9 +16,9 @@ export const Hero = ({ onScrollTo, refs }) => {
             <FontAwesomeIcon icon={faFolderOpen} className={styles.icon} />
             <span>projects</span>
           </li>
-          <li className={styles.iconLink} onClick={() => onScrollTo(refs.skillsRef)}>
+          <li className={styles.iconLink} onClick={() => onScrollTo(refs.experienceRef)}>
             <FontAwesomeIcon icon={faFileLines} className={styles.icon} />
-            <span>myskills.txt</span>
+            <span>experience.txt</span>
           </li>
           <li className={styles.iconLink} onClick={() => onScrollTo(refs.skillsRef)}>
             <FontAwesomeIcon icon={faFileCode} className={styles.icon} />

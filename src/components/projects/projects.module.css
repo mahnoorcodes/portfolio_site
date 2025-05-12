@@ -3,14 +3,14 @@
     text-align: center;
     z-index:1;
     padding: 2rem;
-    background-color: var(--color-text)
+    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
 }
 .projectCard {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
-    background: var(--color-dark);
+    background: var(--color-text);
     color: var(--color-text);
     border-radius: 12px;
     padding: 1rem;
