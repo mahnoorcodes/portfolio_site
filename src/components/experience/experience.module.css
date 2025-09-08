@@ -2,8 +2,8 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    padding: 4rem 2rem; /* bigger padding top & bottom */
-    min-height: 600px; /* ensures section doesn’t collapse */
+    padding: 4rem 2rem; 
+    min-height: 600px; 
 }
 .title{
     font-size: 1.5rem;
@@ -43,10 +43,20 @@
 .timelineItemLeft .timelineContent {
     position: absolute;
     right: 50%;           
-    transform: translateX(-30px); /* shift left */
+    transform: translateX(-30px); 
 }
-
+.timelineItemLeft .timelineDate {
+    left: 0;               
+    transform: translateX(0) translateY(-10px);
+    text-align: left;
+}
+.timelineItemRight .timelineDate {
+    left: 100%;        
+    transform: translateX(-100%) translateY(-10px);
+    text-align: right;
+}
 .timelineContent {
+    position: relative;
     width: 500px;
     background-color: white;
     padding: 1rem 1.5rem;
