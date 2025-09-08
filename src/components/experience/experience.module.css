@@ -44,6 +44,7 @@
     position: absolute;
     right: 50%;           
     transform: translateX(-30px); 
+    text-align: right;
 }
 .timelineItemLeft .timelineDate {
     left: 0;               
