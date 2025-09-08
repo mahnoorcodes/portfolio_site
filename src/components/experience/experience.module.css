@@ -36,15 +36,14 @@
 }
 .timelineItemRight .timelineContent {
     position: absolute;
-    left: 50%;            /* start at the center line */
-    transform: translateX(30px); /* shift right */
+    left: 50%;          
+    transform: translateX(30px); 
     text-align: left;
 }
 .timelineItemLeft .timelineContent {
     position: absolute;
-    right: 50%;           /* start at the center line */
+    right: 50%;           
     transform: translateX(-30px); /* shift left */
-    text-align: right;
 }
 
 .timelineContent {
@@ -54,7 +53,6 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 .timelineContent:hover {
     transform: translateX(20px) scale(1.05); 
     transition: transform 0.3s ease; 
@@ -69,16 +67,17 @@
     color: #666;
     margin: 0.2rem 0;
 }
-
 .timelineDate {
     position: absolute;
-    top: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 100%;        
+    left: 50%;          
+    transform: translateX(-50%) translateY(-10px); 
     color: #27224b;
     font-weight: 600;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    z-index: 2;
 }
-
 .timelineContent p {
     margin-top: 0.5rem;
     color: #444;
