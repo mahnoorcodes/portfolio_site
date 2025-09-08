@@ -48,15 +48,14 @@
     transform: translateX(-30px); 
     text-align: right;
 }
-.timelineItemLeft .timelineDate {
-    left: 0;               
-    transform: translateX(0) translateY(-10px);
-    text-align: left;
+.timelineItemLeft .timelineDate {        
+    transform: translateX(-20px) translateY(-50%);
+    text-align: right;
 }
 .timelineItemRight .timelineDate {
     left: 100%;        
-    transform: translateX(-100%) translateY(-10px);
-    text-align: right;
+    transform: translateX(-20px) translateY(-50%);
+    text-align: left;
 }
 .timelineContent {
     position: relative;
@@ -82,10 +81,9 @@
 }
 .timelineDate {
     position: absolute;
-    bottom: 100%; 
     top:0;       
     left: 50%;          
-    transform: translateX(-50%) translateY(-50%); 
+    transform: translateX(20px) translateY(-50%); 
     color: #27224b;
     font-weight: 600;
     font-size: 1.4rem;
