@@ -38,13 +38,16 @@
     border: 1px solid white;
     backdrop-filter: blur(6px);
     font-weight: 500;
+    align-items:center;
 }
 .techstackBoxes {
     display: grid;
-    grid-template-columns: repeat(2, 2fr); 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 2rem;
     padding: 1rem;
-    justify-content:center 
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
 }
 .certificateSection {
     margin: 2rem auto;
