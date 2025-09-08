@@ -11,21 +11,19 @@
     color: var(--color-primary);
 }
 .timeline {
-    display: flex;
-    flex-direction: column;
     position: relative;
-    gap: 2rem;
     margin: 0 auto;
     width: 2px;
     background-color: #ccc;
+    padding: 2rem 0;
 }
 
 .timelineItem {
     position: relative;
-    margin-bottom: 4rem;
-    width: 100%;
+    margin-bottom: 6rem;
 }
 
+/* Timeline dot stays in the middle */
 .timelineDot {
     width: 14px;
     height: 14px;
@@ -33,21 +31,31 @@
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    top: 0rem;
+    top: 0;
     transform: translateX(-50%);
     z-index: 1;
 }
+.timelineItemRight .timelineContent {
+    position: absolute;
+    left: 50%;            /* start at the center line */
+    transform: translateX(30px); /* shift right */
+    text-align: left;
+}
+.timelineItemLeft .timelineContent {
+    position: absolute;
+    right: 50%;           /* start at the center line */
+    transform: translateX(-30px); /* shift left */
+    text-align: right;
+}
+
 .timelineContent {
+    width: 500px;
     background-color: white;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    width: 500px;
-    margin-left:2rem; 
-    margin-top:4rem;
-    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .timelineContent:hover {
     transform: translateX(20px) scale(1.05); 
     transition: transform 0.3s ease; 
@@ -65,31 +73,17 @@
 
 .timelineDate {
     position: absolute;
-    top: -2rem;    
-    transform: translateX(10px);
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
     color: #27224b;
-    font-size: 1.4rem;
     font-weight: 600;
-    margin-left:2rem;
-    z-index: 2;
-    white-space: nowrap;
 }
 
 .timelineContent p {
     margin-top: 0.5rem;
     color: #444;
 }
-
-.timelineItemLeft {
-  align-self: flex-start;
-  text-align: left;
-}
-
-.timelineItemRight {
-  align-self: flex-end;
-  text-align: right;
-}
-
 @media (max-width: 780px) {
     .experienceSection {
         padding: 1rem;
