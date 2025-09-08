@@ -42,9 +42,9 @@
 }
 .techstackBoxes {
     display: flex;
-    flex-wrap: wrap;          /* allow multiple rows */
-    justify-content: center;  /* center items horizontally */
-    gap: 2rem;                /* space between items */
+    flex-wrap: wrap;         
+    justify-content: center;  
+    gap: 2rem;                
     padding: 1rem;
 }
 .certificateSection {

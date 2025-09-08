@@ -3,10 +3,10 @@ import styles from './experience.module.css'
 
 const timelineData = [
     {
-        title: 'Freelance Web Designer and Developer',
-        company: 'Upwork- Remote',
+        title: 'Web Developer',
+        company: 'ICEDROP.IO - US Delivery Service Website Project - Upwork Remote',
         date: 'May 2025 – Present',
-        description: 'Designed modern, accessible websites for small businesses using Figma, GoDaddy and WordPress.'
+        description: 'Developed a responsive delivery service website for a U.S.-based client using WordPress and Elementor on Upwork. Managed front-end UI/UX implementation, integrated third-party RESTful APIs, and built custom interactive components using JavaScript, PHP, and CSS. Applied AI-assisted workflows with ChatGPT for code review and optimisation.'
     }
 ];
 
