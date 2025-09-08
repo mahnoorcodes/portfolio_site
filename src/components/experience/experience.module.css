@@ -90,7 +90,7 @@
   text-align: right;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .experienceSection {
         padding: 1rem;
     }

@@ -6,13 +6,15 @@ const timelineData = [
         title: 'Web Developer',
         company: 'ICEDROP.IO - US Delivery Service Website Project - Upwork Remote',
         date: 'May 2025 – Present',
-        description: 'Developed a responsive delivery service website for a U.S.-based client using WordPress and Elementor on Upwork. Managed front-end UI/UX implementation, integrated third-party RESTful APIs, and built custom interactive components using JavaScript, PHP, and CSS. Applied AI-assisted workflows with ChatGPT for code review and optimisation.'
+        description: 'Developed a responsive delivery service website for a U.S.-based client using WordPress and Elementor on Upwork. Managed front-end UI/UX implementation, integrated third-party RESTful APIs, and built custom interactive components using JavaScript, PHP, and CSS. Applied AI-assisted workflows with ChatGPT for code review and optimisation.',
+        position:'right'
     },
     {
         title: 'Uniform Sales Assistant',
         company: 'Bukhatir Education Advancement and Management International (Beam) | American School of Creative Science, Al Layyah',
         date: 'August 2024 – September 2024',
-        description: 'Streamlined sales and inventory management using Microsoft Excel. Enhanced customer experience by efficiently handling transactions and inquiries.'
+        description: 'Streamlined sales and inventory management using Microsoft Excel. Enhanced customer experience by efficiently handling transactions and inquiries.',
+        position:'left'
     }
 ];
 
@@ -25,10 +27,10 @@ return (
     {timelineData.map((item, index) => (
         <div
             className={`${styles.timelineItem} ${
-                index % 2 === 0 ? styles.timelineItemLeft : styles.timelineItemRight
+                item.position === 'right' ? styles.timelineItemRight : styles.timelineItemLeft
             }`}
             key={index}
-        >            
+        >        
             <div className={styles.timelineDot}></div>
             <span className={styles.timelineDate}>{item.date}</span>
             <div className={styles.timelineContent}>
