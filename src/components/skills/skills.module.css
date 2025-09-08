@@ -59,9 +59,8 @@
     font-size: 1rem;
 }
 .card {
-    width: 260px;           /* fixed width for all cards */
-    min-width: 260px;       /* ensure uniform width */
-    max-width: 260px;       /* enforce same width */
+    width: 300px;           /* fixed width for all cards */
+    max-width: 300px;       /* enforce same width */
     padding: 1rem;
     box-sizing: border-box;
     display: flex;
@@ -69,7 +68,6 @@
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    word-wrap: break-word;  /* wrap long words inside box */
 }
 
 .image {
