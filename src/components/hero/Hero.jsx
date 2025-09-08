@@ -34,7 +34,7 @@ export const Hero = ({ onScrollTo, refs }) => {
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>HELLO WORLD!</h1> 
           <img 
-            src={heroImage}
+            src={pixelme}
             alt="Hero Image" 
             className={styles.heroImage} 
           />   
