@@ -59,27 +59,28 @@
     font-size: 1rem;
 }
 .card {
-    padding: 1rem;
     width: 260px;           /* fixed width for all cards */
-    min-width: 260px;       /* enforce same width */
+    min-width: 260px;       /* ensure uniform width */
     max-width: 260px;       /* enforce same width */
+    padding: 1rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    word-break: break-word; /* handle long words */
+    word-wrap: break-word;  /* wrap long words inside box */
 }
 
 .image {
-    width: 100%;            /* fill the card width */
-    height: 160px;          /* optional: fixed height for uniformity */
-    object-fit: cover;      /* fill width while maintaining aspect ratio */
+    width: 100%;            /* fills the card width */
+    height: 160px;          /* optional: same height for all images */
+    object-fit: cover;      /* maintain aspect ratio while filling box */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
 }
+
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
