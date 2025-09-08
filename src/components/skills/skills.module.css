@@ -4,10 +4,6 @@
     z-index:1;
     padding: 2rem;
     background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
-    display: flex; /*extra */
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
 }
 .title{
     font-size: 1.5rem;
@@ -16,14 +12,16 @@
     color: var(--color-primary);
 }
 .categoryBox {
-    margin-bottom: 2rem;
+    margin-bottom: 0; /* Remove bottom margin, use gap instead */
     color: var(--color-text);
     display: flex;
     flex-direction: column;
-    align-items:center; 
-    margin-bottom: 0; /* Remove margin-bottom, spacing handled by .skillsSection gap */
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .categoryTitle {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
