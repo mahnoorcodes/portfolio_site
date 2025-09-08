@@ -11,7 +11,10 @@
     color: var(--color-primary);
 }
 .timeline {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    gap: 2rem;
     margin: 0 auto;
     width: 2px;
     background-color: #ccc;
@@ -76,6 +79,17 @@
     margin-top: 0.5rem;
     color: #444;
 }
+
+.timelineItemLeft {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.timelineItemRight {
+  align-self: flex-end;
+  text-align: right;
+}
+
 @media (max-width: 600px) {
     .experienceSection {
         padding: 1rem;

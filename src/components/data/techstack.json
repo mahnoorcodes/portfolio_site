@@ -20,7 +20,8 @@
 ],
 "AI_and_Assistants": [
     { "title": "ChatGPT" },
-    { "title": "GitHub Copilot" }
+    { "title": "GitHub Copilot" },
+    { "title": "Chat with Z.ai" }
 ],
 "Tools_and_IDEs": [
     { "title": "VSCode" },

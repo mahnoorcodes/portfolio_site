@@ -23,7 +23,12 @@ return (
 
     <div className={styles.timeline}>
     {timelineData.map((item, index) => (
-        <div className={styles.timelineItem} key={index}>            
+        <div
+            className={`${styles.timelineItem} ${
+                index % 2 === 0 ? styles.timelineItemLeft : styles.timelineItemRight
+            }`}
+            key={index}
+        >            
             <div className={styles.timelineDot}></div>
             <span className={styles.timelineDate}>{item.date}</span>
             <div className={styles.timelineContent}>
