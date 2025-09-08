@@ -41,13 +41,11 @@
     align-items:center;
 }
 .techstackBoxes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;          /* allow multiple rows */
+    justify-content: center;  /* center items horizontally */
+    gap: 2rem;                /* space between items */
     padding: 1rem;
-    justify-content:center;
-    justify-items:center;
-    align-items:center;
 }
 .certificateSection {
     margin: 2rem auto;
