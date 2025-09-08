@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './hero.module.css';
-import heroImage from '../../assets/hero.jpg';
+import heroImage from '../../assets/pixelme.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser, faFolderOpen, faFileLines, faFileCode, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,7 +34,7 @@ export const Hero = ({ onScrollTo, refs }) => {
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>HELLO WORLD!</h1> 
           <img 
-            src={pixelme}
+            src={heroImage}
             alt="Hero Image" 
             className={styles.heroImage} 
           />   
