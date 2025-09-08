@@ -36,12 +36,14 @@
 }
 .timelineItemRight .timelineContent {
     position: absolute;
+    top:0;
     left: 50%;          
     transform: translateX(30px); 
     text-align: left;
 }
 .timelineItemLeft .timelineContent {
     position: absolute;
+    top:0;
     right: 50%;           
     transform: translateX(-30px); 
     text-align: right;
@@ -63,7 +65,6 @@
     padding: 2rem 1.5rem 1rem 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-top: 2rem;
 }
 .timelineContent:hover {
     transform: translateX(20px) scale(1.05); 
