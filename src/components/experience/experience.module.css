@@ -2,7 +2,8 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    padding: 2rem;
+    padding: 4rem 2rem; /* bigger padding top & bottom */
+    min-height: 600px; /* ensures section doesn’t collapse */
 }
 .title{
     font-size: 1.5rem;
@@ -17,13 +18,11 @@
     background-color: #ccc;
     padding: 2rem 0;
 }
-
 .timelineItem {
     position: relative;
     margin-bottom: 6rem;
+    min-height:180px
 }
-
-/* Timeline dot stays in the middle */
 .timelineDot {
     width: 14px;
     height: 14px;
