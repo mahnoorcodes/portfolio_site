@@ -7,6 +7,12 @@ const timelineData = [
         company: 'ICEDROP.IO - US Delivery Service Website Project - Upwork Remote',
         date: 'May 2025 – Present',
         description: 'Developed a responsive delivery service website for a U.S.-based client using WordPress and Elementor on Upwork. Managed front-end UI/UX implementation, integrated third-party RESTful APIs, and built custom interactive components using JavaScript, PHP, and CSS. Applied AI-assisted workflows with ChatGPT for code review and optimisation.'
+    },
+    {
+        title: 'Uniform Sales Assistant',
+        company: 'Bukhatir Education Advancement and Management International (Beam) | American School of Creative Science, Al Layyah',
+        date: 'August 2024 – September 2024',
+        description: 'Streamlined sales and inventory management using Microsoft Excel. Enhanced customer experience by efficiently handling transactions and inquiries.'
     }
 ];
 

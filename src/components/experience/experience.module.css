@@ -76,3 +76,29 @@
     margin-top: 0.5rem;
     color: #444;
 }
+@media (max-width: 600px) {
+    .experienceSection {
+        padding: 1rem;
+    }
+    .timeline {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timelineContent {
+        width: 90vw;
+        min-width: unset;
+        margin-left: 0;
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    .timelineDate {
+        position: static;
+        display: block;
+        transform: none;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+}
