@@ -48,14 +48,15 @@
     transform: translateX(-30px); 
     text-align: right;
 }
-.timelineItemLeft .timelineDate {        
-    transform: translateX(-62px) translateY(-100%);
+
+.timelineItemLeft .timelineDate {
     text-align: right;
 }
+
 .timelineItemRight .timelineDate {
-    transform: translateX(-250px) translateY(-95%);
     text-align: left;
 }
+
 .timelineItemRight .timelineContent:hover {
     transform: translateX(50px) scale(1.05); 
     transition: transform 0.3s ease; 
@@ -84,15 +85,12 @@
     margin: 0.2rem 0;
 }
 .timelineDate {
-    position: absolute;
-    top:0;       
-    left: 50%;          
-    transform: translateX(20px) translateY(-50%); 
-    color: #27224b;
+    position: relative;
+    display: block;
     font-weight: 600;
-    font-size: 1.4rem;
-    white-space: nowrap;
-    z-index: 2;
+    font-size: 1.1rem;
+    color: #27224b;
+    margin-bottom: 0.5rem;
 }
 .timelineContent p {
     margin-top: 0.5rem;

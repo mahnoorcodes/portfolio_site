@@ -3,6 +3,13 @@ import styles from './experience.module.css'
 
 const timelineData = [
     {
+        title: 'Information Technology Engineer Intern',
+        company: 'Panosec FZE LLC- Remote',
+        date: 'September 2025 – Present',
+        description: 'Redesigning and upgrading an old website using WordPress, Divi and AI tools. Collaborate with the team and complete the client\'s tasks.',
+        position:'left'
+    },
+    {
         title: 'Web Developer',
         company: 'ICEDROP.IO - US Delivery Service Website Project - Upwork Remote',
         date: 'May 2025 – Present',
@@ -28,7 +35,7 @@ return (
         <div className={`${styles.timelineItem} ${item.position === 'right' ? styles.timelineItemRight : styles.timelineItemLeft}`} key={index}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
-            <span className={styles.timelineDate}>{item.date}</span>
+                <span className={styles.timelineDate}>{item.date}</span>
                 <h3>{item.title}</h3>
                 <h4>{item.company}</h4>
                 <p>{item.description}</p>
