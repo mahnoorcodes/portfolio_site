@@ -1,180 +1,138 @@
-.heroSection{
-    display:flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center;
-    padding-top: 8rem;
-    padding-bottom: 4rem; 
-    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%);
-    /* background-size: 200% 200%; 
-    animation: gradientMove 6s infinite alternate;
-    color: var(--color-text); 
-    padding-top: 80px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    min-height: 100vh;*/
-} 
-.icon {
-    font-size: 2.5rem; 
-    margin: 1rem;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;            /* make both columns equal height */
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;               /* full viewport height */
+  padding: 0 5%;                   /* horizontal padding only */
+  box-sizing: border-box;
+  gap: 2rem;
 }
-.iconBox{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr); 
+
+
+    /* Left column */
+    .heroContainer {
+    flex: 1 1 0;
+    max-width: 600px;
+    box-sizing: border-box;
     padding: 2.5rem;
-    gap: 1.5rem;
-    margin: 0 auto;
-    flex-wrap:wrap;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--color-translucent);
-    border-radius:2rem;
-    border: 2px solid white;
-    backdrop-filter: blur(10px);
-    width:fit-content;   
-}
-.iconLink {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    font-weight:500;
-    color: var(--color-text);
-    transition: transform 0.2s ease, color 0.2s ease;
-    
-}
-.iconLink:hover {
-    transform: scale(1.2);
-    color: var(--color-primary);
-    cursor:pointer
-}
-.heroContainer{
-    display:flex;
-    position: relative;
-    padding: 2.5rem;
     justify-content: center;
-    align-items: center;
-    background-color: var(--color-translucent);
-    border-radius:2rem;
-    border: 2px solid white;
-    backdrop-filter: blur(10px); 
+    align-items: center;      
+    text-align: center;      
     color: var(--color-text);
-    flex-direction: column;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-.heroTitle{
-    position: relative;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    z-index:1;
-}
-.heroTitle::after {
-    content: "";
-    display: block;
-    width: 60%;
-    height: 2px;
-    background-color: white;
-    margin-top: 1.0rem;
-}
-.heroDescription{
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height:1.5;
-    word-spacing: 0.3rem;
-}
-.heroText {
+    }
+
+    .heroText {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-.heroImage {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    padding:0.4rem;
-    margin-left:auto;
-    margin-bottom:1rem;
-    box-sizing: border-box;
-    background-color: var(--color-primary);
-    z-index:1;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-}
-.heroImage:hover {
-    animation: flip 2s linear;
-}
-@keyframes flip {
-    50%{
-        transform: rotateY(180deg);
+    text-align: center;      
+    align-items: center;     
     }
-    to{
-        transform: rotateY(360deg);
-    }
-}
-@keyframes floating {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-.heroTitle, .heroDescription {
+
+    .heroTitle {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; /* pixel fonts often look better with normal weight */
+    font-family: 'Press Start 2P', cursive; /* 👈 pixel font */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    z-index: 1;
     opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-@keyframes fadeIn {
-    to {
-    opacity: 1;
+    animation: fadeIn 1.8s forwards;
     }
+
+
+    .heroDescription {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    word-spacing: 0.3rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2.2s forwards;
+    }
+
+/* Right column (Spline container) */
+.splineSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 480px;           /* Limit width */
+  max-height: 480px;          /* Limit height */
+  margin: auto;
+  overflow: hidden;           /* hide excess */
 }
 
-/* Media Query for Mobile Screens */
-@media (max-width: 768px) {
+/* Force the Spline embed to obey your limits */
+.splineSection iframe,
+.splineSection canvas,
+.splineSection > div {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 480px !important;
+  max-height: 480px !important;
+  transform: scale(0.75);     /* 👈 smaller model */
+  transform-origin: center center;
+  object-fit: contain;
+}
+
+    /* Simple fade-in animation */
+    @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+    }
+
+    /* Responsive: stack for mobile */
+    @media (max-width: 768px) {
     .heroSection {
-        flex-direction: column; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding-top: 6.5rem;
         padding-bottom: 2rem;
     }
 
-    .iconBox {
-        display: none; 
+    .heroContainer {
+        max-width: 92%;
+        padding: 1.5rem;
+        align-items: center;
+        text-align: center;
     }
 
-    .heroContainer {
-        max-width: 90%; 
-        padding: 1.5rem;
-        transform: none; 
+    .heroText {
+        text-align: center;
     }
 
     .heroTitle {
-        font-size: 1.5rem; 
+        font-size: 1.6rem;
     }
 
     .heroDescription {
-        font-size: 1rem; 
-        text-align: center; 
+        font-size: 1rem;
     }
 
-    .heroImage {
-        position: relative; 
-        top: 0;
-        right: 0;
-        width: 125px; 
-        height: 125px;
-        margin: 1rem auto; 
+    .splineSection {
+        width: 100%;
+        margin-top: 2rem;
+        max-width: 100%;
     }
-}
+
+    .splineSection > div,
+    .splineSection > iframe,
+    .splineSection > canvas {
+        max-height: 420px;
+    }
+    }

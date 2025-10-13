@@ -25,8 +25,8 @@ export const Navbar = ({ onScrollTo, refs }) => {
 
             <ul className={`${styles.navbarMenu} ${menuOpen ? styles.show : ''}`}>
                 <li onClick={() => handleNavClick(refs.aboutRef)}>About</li>
-                <li onClick={() => handleNavClick(refs.skillsRef)}>Skills</li>
                 <li onClick={() => handleNavClick(refs.experienceRef)}>Experience</li>
+                <li onClick={() => handleNavClick(refs.skillsRef)}>Skills</li>
                 <li onClick={() => handleNavClick(refs.projectsRef)}>Projects</li>
                 <li onClick={() => handleNavClick(refs.cvRef)}>Resume</li>
                 <li onClick={() => handleNavClick(refs.contactRef)}>Contact Me</li>

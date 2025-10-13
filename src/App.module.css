@@ -1,7 +1,7 @@
 @import "./vars.css";
 .App {
     background-color: var(--color-text);
-    width: 100%;
+    width: 100vw;
     min-height: 100vh; 
     height: auto;      
     overflow-x:hidden;
