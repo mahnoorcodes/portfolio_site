@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+:root {
+    --navbar-height: 90px; 
+    --spline-scale: 0.66;     
+    --spline-padding: 1.25rem;
+}
 .heroSection {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;            /* make both columns equal height */
-  justify-content: space-between;
-  width: 100%;
-  min-height: 100vh;               /* full viewport height */
-  padding: 0 5%;                   /* horizontal padding only */
-  box-sizing: border-box;
-  gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;            
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;               
+    padding: 0 5%;                   
+    box-sizing: border-box;
+    gap: 2rem;
 }
 
-
-    /* Left column */
-    .heroContainer {
+.heroContainer {
     flex: 1 1 0;
     max-width: 600px;
     box-sizing: border-box;
@@ -25,114 +26,165 @@
     align-items: center;      
     text-align: center;      
     color: var(--color-text);
-    }
+}
 
-    .heroText {
+.heroText {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+text-align: center;      
+align-items: center;     
+}
+
+.heroTitle {
+position: relative;
+font-size: 2rem;
+font-weight: 400; 
+font-family: 'Press Start 2P', cursive; 
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--color-primary);
+margin-bottom: 0.5rem;
+z-index: 1;
+opacity: 0;
+animation: fadeIn 1.8s forwards;
+}
+
+
+.heroDescription {
+font-size: 1.5rem;
+font-weight: 400;
+line-height: 1.5;
+word-spacing: 0.3rem;
+margin: 0;
+opacity: 0;
+animation: fadeIn 2.2s forwards;
+}
+
+.downloadBtn{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.socialIcons {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;      
-    align-items: center;     
-    }
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+}
 
-    .heroTitle {
-    position: relative;
-    font-size: 2rem;
-    font-weight: 400; /* pixel fonts often look better with normal weight */
-    font-family: 'Press Start 2P', cursive; /* 👈 pixel font */
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.socialIcons a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.2);
+    color: var(--color-primary); 
+}
+
+.upworkText {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+.upworkText:hover {
     color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    z-index: 1;
-    opacity: 0;
-    animation: fadeIn 1.8s forwards;
-    }
+}
 
-
-    .heroDescription {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.5;
-    word-spacing: 0.3rem;
-    margin: 0;
-    opacity: 0;
-    animation: fadeIn 2.2s forwards;
-    }
-
-/* Right column (Spline container) */
 .splineSection {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 480px;           /* Limit width */
-  max-height: 480px;          /* Limit height */
-  margin: auto;
-  overflow: hidden;           /* hide excess */
+    position: relative;           
+    display: block;
+    width: 100%;
+    max-width: 480px;             
+    height: auto;
+    min-height: 320px;
+    margin: 0 auto;
+    padding: var(--spline-padding);
+    overflow: visible;            
+    box-sizing: border-box;
+    pointer-events: auto;
 }
 
-/* Force the Spline embed to obey your limits */
-.splineSection iframe,
-.splineSection canvas,
-.splineSection > div {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 480px !important;
-  max-height: 480px !important;
-  transform: scale(0.75);     /* 👈 smaller model */
-  transform-origin: center center;
-  object-fit: contain;
+.splineSection > div,
+.splineSection canvas {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform-origin: center center !important;
+    width: 160% !important;
+    height: 160% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 160% !important;
+    min-height: 160% !important;
+
+    transform: translate(-50%, -50%) scale(var(--spline-scale)) !important;
+
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: auto;
 }
 
-    /* Simple fade-in animation */
-    @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-    }
+@keyframes fadeIn {
+to {
+    opacity: 1;
+}
+}
 
-    /* Responsive: stack for mobile */
-    @media (max-width: 768px) {
-    .heroSection {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 6.5rem;
-        padding-bottom: 2rem;
-    }
+/* Responsive: stack for mobile */
+@media (max-width: 768px) {
+.heroSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6.5rem;
+    padding-bottom: 2rem;
+}
 
-    .heroContainer {
-        max-width: 92%;
-        padding: 1.5rem;
-        align-items: center;
-        text-align: center;
-    }
+.heroContainer {
+    max-width: 92%;
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
 
-    .heroText {
-        text-align: center;
-    }
+.heroText {
+    text-align: center;
+}
 
-    .heroTitle {
-        font-size: 1.6rem;
-    }
+.heroTitle {
+    font-size: 1.6rem;
+}
 
-    .heroDescription {
-        font-size: 1rem;
-    }
+.heroDescription {
+    font-size: 1rem;
+}
 
-    .splineSection {
-        width: 100%;
-        margin-top: 2rem;
-        max-width: 100%;
-    }
+.splineSection {
+    width: 100%;
+    margin-top: 2rem;
+    max-width: 100%;
+}
 
-    .splineSection > div,
-    .splineSection > iframe,
-    .splineSection > canvas {
-        max-height: 420px;
-    }
-    }
+.splineSection > div,
+.splineSection > iframe,
+.splineSection > canvas {
+    max-height: 420px;
+}
+}

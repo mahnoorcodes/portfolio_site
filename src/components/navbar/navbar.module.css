@@ -8,8 +8,12 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color:#39145a;
+    background: rgba(40, 16, 78, 0.35); 
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
+
 .navbarTitle {
     color: var(--color-primary);
     text-decoration: none;
