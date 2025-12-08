@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FaDownload, FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import styles from './hero.module.css';
 import Spline from '@splinetool/react-spline';
 
 export const Hero = () => {
+  const titleRef = useRef(null);
+  
+  useEffect(() => {
+    const elements = [titleRef.current];
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.visible);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => el && observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+  
   return (
     <section id="hero" className={styles.heroSection}>
       {/* Left Column */}
       <div className={styles.heroContainer}>
         <div className={styles.heroText}>
-          <h1 className={styles.heroTitle}>Hello World!</h1>
+          <h1 ref={titleRef} className={styles.heroTitle}>
+            Hello World!
+          </h1>
           <p className={styles.heroDescription}>
             I'm Mahnoor Faisal <br />
             Web Developer | Front-End Developer | UI/UX Enthusiast | Problem Solver

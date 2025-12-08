@@ -1,0 +1,66 @@
+.servicesSection {
+    
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 2rem 1rem 0;
+}
+
+.servicesTitle {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; 
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servicesContent {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem auto 0;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.serviceBox {
+    flex: 1;
+    background: var(--color-translucent);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceBox h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-primary);
+}
+
+.serviceBox p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.serviceBox:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+    .servicesContent {
+        flex-direction: column;
+    }
+}

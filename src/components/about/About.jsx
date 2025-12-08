@@ -1,20 +1,51 @@
-import React, {forwardRef} from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './about.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSmile } from '@fortawesome/free-solid-svg-icons';
 
 export const About = () => {
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        const el = titleRef.current;
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            el.classList.add(styles.visible);
+            observer.unobserve(el); 
+            }
+        });
+        }, { threshold: 0.2 });
+
+        observer.observe(el);
+    }, []);
+    
     return (
             <section id="about" className={styles.aboutSection}>
-                <h1 className={styles.aboutTitle}>ABOUT ME</h1>
+                <h1 ref={titleRef} className={styles.aboutTitle}>ABOUT ME</h1>
                 <div className={styles.aboutContent}>                   
-                    <p>
-                        Hi, I’m Mahnoor, a recent IT graduate with a passion for frontend web and app development!<br/>
-                        I enjoy being creative and I love designing, coding, and gaming. I spent most of my childhood drawing and painting, so I'm pretty good at digital illustrations!<br/>
-                        I am currently exploring opportunities to work on innovative projects that combine design and technology to solve real-world problems.<br/>
-                        Let’s build something cool! <FontAwesomeIcon icon={faSmile} className={styles.smileIcon} />     
-                    </p>
+                    <div className={styles.row}>
+                        <span className={styles.rowIcon}>⭐</span>
+                        <p>
+                            I’m a frontend web developer and IT engineer intern with a passion for modern, responsive web experiences.
+                        </p>
+                    </div>
+
+                    <div className={styles.row}>
+                        <span className={styles.rowIcon}>🚀</span>
+                        <p>
+                            As a freelancer, I’ve worked on real-world web projects creating functional and visually engaging solutions.
+                            My internship enhanced my skills in web development, troubleshooting, and scalable systems.
+                        </p>
+                    </div>
+
+                    <div className={styles.row}>
+                        <span className={styles.rowIcon}>🎨</span>
+                        <p>
+                            I love combining design and technology to build sleek interfaces and digital art, inspired by gaming and creative problem-solving. 
+                        </p>
+                    </div>
                 </div>
             </section>
     );
 };
+export default About;

@@ -2,25 +2,68 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    padding: 2rem;
+    padding: 2rem 1rem 0;
 }
 
 .aboutTitle {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-top:2rem;
-    color: var(--color-primary);
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; 
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .aboutContent {
-    color:var(--color-background);
-    font-size: 1.4rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem; 
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+.row {
+    width: 70%; /* half width */
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* spacing between icon & text */
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+
+    /* horizontal gradient: left → right */
+    background: linear-gradient(
+        to right,
+        var(--color-background-secondary) 0%,
+        var(--color-translucent) 100%
+    );
+
+    color: white;
 }
 
-.smileIcon{
-    font-size: 1.5rem; 
-    color: var(--color-primary);
+/* ICON styling */
+.rowIcon {
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0; 
+}
+
+.row p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.row:not(:last-child) {
+  border-bottom: none;
 }
