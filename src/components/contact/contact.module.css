@@ -1,74 +1,105 @@
 .contactSection{
     position: relative;
-    text-align: left;
+    text-align: center;
     z-index: 1;
-    background: #27224b;
     padding: 2rem;
-    color:var(--color-text);
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items:center;
     width:100vw;
     padding:2rem;
     gap: 2rem;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-translucent);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 .title{
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 2rem;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400; 
+    line-height:1.6;
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.socialIcons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.6rem;
+    font-size: 1.8rem;
+    margin-top: 1.4rem;
+}
+
+.socialIcons a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.2);
+    color: var(--color-primary); 
+}
+
+.upworkText {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+.upworkText:hover {
     color: var(--color-primary);
 }
-.links{
-    display:flex;
-    flex-direction:column;
-    gap: 1.5rem;
-    font-size:1.2rem;
-    list-style: none;
-    padding:0;
-    margin:0
-}
-.link{
-    display:flex;
 
-}
-.link a{
-    display: flex;
-    align-items: center;      
-    gap: 0.8rem;               
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.icon{
-    margin-right: 1.5rem;
-    font-size: 1.6rem;
-}
-/* Media Query for Mobile Screens */
+
+/* Mobile responsive layout */
 @media (max-width: 768px) {
     .contactSection {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        text-align: center; 
-        gap: 1rem; 
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
+
     .title {
-        font-size: 1.2rem; 
-        margin: 1rem 0;
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
     }
 
-    .links {
-        gap: 1rem; 
+    .socialIcons {
+        justify-content: center;
+        margin-top: 0.5rem;
+        gap: 1rem;
+        font-size: 1.6rem;
     }
 
-    .link a {
-        font-size: 1rem; 
-        gap: 0.5rem; 
+    .socialIcons a {
+        font-size: 1.6rem;
     }
+}
 
-    .icon {
-        margin-right: 0; 
-        font-size: 1.4rem; 
-    }
+:global(section#contact) {
+    min-height: auto !important;
+    height: auto !important;
 }

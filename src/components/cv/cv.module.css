@@ -2,44 +2,62 @@
     position:relative;
     text-align: center;
     z-index:1;
-    background: var(--color-text);
     padding:2rem
 }
 .title{
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-top:2rem;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; 
+    line-height:1.6;
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: var(--color-primary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.cvContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto;
-    color:var(--color-dark)
-    
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
-.cvLink{
-    background-color: var(--color-translucent);
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    border: 1.5px solid #27224b;
-    backdrop-filter: blur(6px);
-    font-weight: 500;
-}
-.cvLink a {
-    color: var(--color-primary); 
-    font-weight: 600;
-    text-decoration: underline;
-    transition: all 0.3s ease;
-}
-.cvLink a:hover {
+.cvLink {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     color: #fff;
-    background-color: var(--color-primary);
-    padding: 2px 6px;
-    border-radius: 6px;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 25px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cvLink a {
+    color: #fff; 
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.cvLink {
+    animation: float 2s ease-in-out infinite;
+}
+
+@media (max-width: 780px) {
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+:global(section#cv) {
+    min-height: auto !important;
+    height: auto !important;
 }

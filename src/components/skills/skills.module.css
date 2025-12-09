@@ -3,59 +3,75 @@
     text-align: center;
     z-index:1;
     padding: 2rem;
-    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
 }
 .title{
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-top:2rem;
-    color: var(--color-primary);
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; 
+    line-height:1.6;
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.categoryBox {
-    margin-bottom: 0; 
-    color: var(--color-text);
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.techstackBoxes {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    gap: 2rem; 
+    max-width:1100px;
+    align-items:center;
+    margin: 0 auto;
+}
+
+.categoryBox {
+    display: flex;
     align-items: center;
+    gap: 1rem;
     width: 100%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
+
 .categoryTitle {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-family: var(--font-open-sans);
     color: var(--color-text);
+    background-color: var(--color-primary-translucent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid white;
+    width: 160px;   
+    flex-shrink: 0; 
+    text-align: center;
 }
+
 .stackItems {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.25rem 0.5rem;
+    gap: 0.5rem;
+    
 }
 
 .techItem {
     background-color: var(--color-translucent);
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    border: 1px solid white;
-    backdrop-filter: blur(6px);
-    font-weight: 500;
-    align-items:center;
+    color:var(--color-text);
+    font-family:var(--font-open-sans);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 1rem;
 }
-.techstackBoxes {
-    display: flex;
-    flex-wrap: wrap;         
-    justify-content: center;  
-    gap: 2rem;                
-    padding: 1rem;
-}
+
 .certificateSection {
     margin: 2rem auto;
     max-width: 900px;
     text-align: center;
-    color: var(--color-text);
-    font-size: 1rem;
 }
 .card {
     padding: 1rem;
@@ -64,21 +80,42 @@
     width: 100%;
     max-height: 300px;
     object-fit: contain;
-    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
 }
-/* Media Query for Mobile Screens */
+.certText {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    font-family:var(--font-open-sans);
+    font-size: 1rem;
+}
+/* Mobile Query */
 @media (max-width: 768px) {
-    .techItem {
-        padding: 0.5rem 0.75rem; 
-        font-size: 0.9rem; 
-        width: 100%; 
-        text-align: center; 
+    .title {
+        font-size: 1.6rem;
+    }
+    .categoryBox {
+        flex-direction: column; 
+        align-items: center;
+        gap: 0.5rem; 
     }
 
-    .techstackBoxes {
-        grid-template-columns: 1fr; 
-        gap: 1rem; 
+    .categoryTitle {
+        width: auto;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .stackItems {
+        justify-content: center; 
+    }
+
+    .techItem {
+        width: auto; 
+        max-width: 80%; 
     }
 }
+

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
 import styles from './skills.module.css'
 import techstack from "../data/techstack.json";
 import Slider from "react-slick";
@@ -54,9 +54,29 @@ const sliderSettings = {
 };
 
 export const Skills = () => {
+    const skillsTitleRef = useRef(null);
+    const certTitleRef = useRef(null);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(styles.visible);
+                observer.unobserve(entry.target);
+            }
+            });
+        },
+        { threshold: 0.2 }
+        );
+    
+        if (skillsTitleRef.current) observer.observe(skillsTitleRef.current);
+        if (certTitleRef.current) observer.observe(certTitleRef.current);
+        }, []);
+    
 return (
     <section id="skills" className={styles.skillsSection}>
-        <h1 className={styles.title}>TECH STACK</h1>
+        <h1 ref={skillsTitleRef} className={styles.title}>SKILLS + TECH STACK</h1>
         <div className={styles.techstackBoxes}>
             {Object.entries(techstack).map(([category, items]) => (
             <div key={category} className={styles.categoryBox}>
@@ -73,13 +93,12 @@ return (
         </div>
 
         <div className={styles.certificateSection}>
-            <h1 className={styles.title}>CERTIFICATES</h1>
+            <h1 ref={certTitleRef} className={styles.title}>CERTIFICATIONS</h1>
             <Slider {...sliderSettings}>
                 {certificates.map((cert, index) => (
                 <div key={index} className={styles.card}>
                     <img src={cert.image} alt={cert.certTitle} className={styles.image} />
-                    <p>{cert.title}</p>
-                    <p>{cert.date}</p>
+                    <p className={styles.certText}>{cert.title}<br/>{cert.date}</p>
                 </div>
                 ))}
             </Slider>

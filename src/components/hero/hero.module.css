@@ -13,6 +13,7 @@
     padding: 0 5%;                   
     box-sizing: border-box;
     gap: 2rem;
+    padding-top:80px;
 }
 
 .heroContainer {
@@ -33,7 +34,8 @@
     flex-direction: column;
     gap: 1rem;
     text-align: center;      
-    align-items: center;     
+    align-items: center; 
+    font: var(--font-roboto);    
 }
 
 .heroTitle {
@@ -41,6 +43,7 @@
     font-size: 2rem;
     font-weight: 400; 
     font-family: 'Press Start 2P', cursive; 
+    line-height:1.6;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -56,8 +59,9 @@
 }
 
 .heroDescription {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-family: var(--font-open-sans);
+    font-size: 1.6rem;
+    font-weight: 550;
     line-height: 1.5;
     word-spacing: 0.4rem;
     margin: 0;
@@ -76,6 +80,14 @@
     border-radius: 25px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.downloadBtn {
+    animation: float 2s ease-in-out infinite;
 }
 
 .socialIcons {

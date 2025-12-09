@@ -39,12 +39,12 @@ function App() {
         <About />
       </section>
 
-      <section ref={skillsRef} id="skills">
-        <Skills />
-      </section>
-
       <section ref={experienceRef} id="experience">
         <Experience />
+      </section>
+      
+      <section ref={skillsRef} id="skills">
+        <Skills />
       </section>
       
       <section ref={projectsRef} id="projects">

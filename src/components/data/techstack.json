@@ -4,9 +4,10 @@
     { "title": "Java" },
     { "title": "Python" },
     { "title": "C#" },
+    { "title": "SQL" },
     { "title": "PHP" }
 ],
-"Frameworks_and_Platforms": [
+"Frameworks_&_Platforms": [
     { "title": "React" },
     { "title": "React Native" },
     { "title": "Node.js" },
@@ -16,22 +17,26 @@
 "Databases": [
     { "title": "MSSQL" },
     { "title": "SQLDeveloper" },
-    { "title": "Firebase" }
+    { "title": "Firebase" },
+    { "title": "Docker" }
 ],
-"AI_and_Assistants": [
+"AI_&_Assistants": [
     { "title": "ChatGPT" },
     { "title": "GitHub Copilot" },
     { "title": "Chat with Z.ai" }
 ],
-"Tools_and_IDEs": [
+"Tools_&_IDEs": [
     { "title": "VSCode" },
     { "title": "Android Studio" },
+    { "title": "Cursor" },
     { "title": "Excel" },
     { "title": "Photoshop" },
     { "title": "Figma" },
     { "title": "WordPress" },
     { "title": "Elementor" },
+    { "title": "Divi" },
     { "title": "Git" },
-    { "title": "GitHub" }
+    { "title": "GitHub" },
+    { "title": "GitLab" }
 ]
 }

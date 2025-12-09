@@ -1,33 +1,66 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
 import styles from './contact.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FaDownload, FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 
 export const Contact = () => {
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        const el = titleRef.current;
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            el.classList.add(styles.visible);
+            observer.unobserve(el); 
+            }
+        });
+        }, { threshold: 0.2 });
+
+        observer.observe(el);
+    }, []);
+
     return (
         <section className={styles.contactSection} id="contact">
-            <h1 className={styles.title}>CONTACT ME</h1>
-            <ul className={styles.links}>
-                <li className={styles.link}>
-                    <a href="mailto:mahnoor.faisal.h@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-                        mahnoor.faisal.h@gmail.com
-                    </a>
-                </li>
-                <li className={styles.link}>
-                    <a href="https://linkedin.com/in/mahnoor-faisal-36493a2ba/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
-                        linkedin.com/in/mahnoor-faisal
-                    </a>
-                </li>
-                <li className={styles.link}>
-                    <a href="https://github.com/mahnoorcodes" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-                        github.com/mahnoorcodes
-                    </a>
-                </li>
-            </ul>
+            <h1 ref={titleRef} className={styles.title}>Let's Get In Touch</h1>
+            <div className={styles.socialIcons}>
+                <a
+                href="https://www.linkedin.com/in/mahnoor-faisal-36493a2ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                >
+                <FaLinkedin />
+                </a>
+
+                <a
+                href="https://github.com/mahnoorcodes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                >
+                <FaGithub />
+                </a>
+
+                <a
+                href="https://www.upwork.com/freelancers/~0123c8d2af1fb979c6?mp_source=share"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Upwork"
+                className={styles.upworkText}
+                >
+                Upwork
+                </a>
+
+                <a
+                href="mailto:mahnoor.faisal.h@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+                >
+                <FaEnvelope />
+                </a>
+            </div>
         </section>
     );
 }

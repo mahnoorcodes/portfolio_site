@@ -3,31 +3,49 @@
     text-align: center;
     z-index:1;
     padding: 2rem;
-    background: linear-gradient(135deg,var(--color-background) 40%,var(--color-background-secondary) 100%); 
 }
 .projectCard {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
-    background: var(--color-text);
+    background: var(--color-primary-translucent);
+    font-family:var(--font-open-sans);
     color: var(--color-text);
+    border: solid 1px white;
     border-radius: 12px;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 1000px;
-    width: 90%;
+    width: 80%;
     margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .projectCard:hover {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease; 
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 .title{
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-top:2rem;
-    color: var(--color-primary);
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400; 
+    line-height:1.6;
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    z-index: 1;
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.projectsTitle{
+    font-size: 1.2rem;
+    font-family: var(--font-open-sans);
+    color: var(--color-text);
+    margin: 0;
 }
 .projects {
     display: flex;
@@ -50,14 +68,15 @@
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-    border: 2px solid #27224b;
+    border: 1px solid white;
 }
 .description {
     margin:1rem;
     font-size: 1rem;
     font-weight: 400;
     text-align: justify;
-    color:var(--color-background)
+    color:var(--color-text);
+    font-family:var(--font-open-sans);
 }
 .skills {
     display: flex;
@@ -70,11 +89,12 @@
 
 .skill {
     font-size: 0.9rem;
-    background: var(--color-text);
-    color: var(--color-background);
+    font-family:var(--font-open-sans);
+    background-color:var(--color-translucent);
+    color: var(--color-text);
+    border: solid 1px white;
     padding: 4px 12px;
-    border-radius:2rem;
-    border: 2px solid #27224b;
+    border-radius:6px;
     backdrop-filter: blur(10px);
     width:fit-content; 
 }
@@ -89,17 +109,21 @@
 .link {
     text-decoration: none;
     color: var(--color-text);
-    background: var(--color-primary);
+    font-family:var(--font-open-sans);
+    background: var(--color-secondary);
     padding: 6px 16px;
     font-size: 0.95rem;
     font-weight: 600;
-    border-radius: 100px;
+    border-radius: 6px;
     white-space: nowrap;
     text-align: center;
 }
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
+        .title {
+        font-size: 1.6rem;
+    }
     .projectCard {
         flex-direction: column; 
         align-items: center; 
