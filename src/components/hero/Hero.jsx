@@ -2,6 +2,8 @@ import React, { useRef, useEffect , useState} from 'react';
 import { FaDownload, FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import styles from './hero.module.css';
 import Spline from '@splinetool/react-spline';
+import staticVoxelImage from '../../assets/staticvoxelspline.png';
+
 
 export const Hero = () => {
   const titleRef = useRef(null);
@@ -93,7 +95,7 @@ export const Hero = () => {
     style={{ width: '100%', height: '100%' }}
   />
   <img
-    src="./assets/staticvoxelspline.jpg"
+    src={staticVoxelImage}
     alt="3D model preview"
     className={styles.splineMobile}
   />
