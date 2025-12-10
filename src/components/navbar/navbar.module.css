@@ -15,12 +15,18 @@
 }
 
 .navbarTitle {
-    font-family:var(--font-open-sans);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 400; 
+    line-height:1.6;
+    font-family: 'Press Start 2P', cursive; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    z-index: 1;
     list-style: none;
+    display:inline;
 }
 .navbarTitle:hover {
     cursor: pointer;
@@ -34,7 +40,7 @@
     font-family:var(--font-open-sans);
     color: var(--color-text);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;

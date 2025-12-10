@@ -22,46 +22,49 @@ export const Contact = () => {
 
     return (
         <section className={styles.contactSection} id="contact">
-            <h1 ref={titleRef} className={styles.title}>Let's Get In Touch</h1>
-            <div className={styles.socialIcons}>
+            <div className={styles.contactRow}>
+                <h1 ref={titleRef} className={styles.title}>Let's Get In Touch</h1>
+                <div className={styles.socialIcons}>
                 <a
-                href="https://www.linkedin.com/in/mahnoor-faisal-36493a2ba/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                    href="https://www.linkedin.com/in/mahnoor-faisal-36493a2ba/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                 >
-                <FaLinkedin />
+                    <FaLinkedin />
                 </a>
 
                 <a
-                href="https://github.com/mahnoorcodes"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
+                    href="https://github.com/mahnoorcodes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
                 >
-                <FaGithub />
+                    <FaGithub />
                 </a>
 
                 <a
-                href="https://www.upwork.com/freelancers/~0123c8d2af1fb979c6?mp_source=share"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Upwork"
-                className={styles.upworkText}
+                    href="https://www.upwork.com/freelancers/~0123c8d2af1fb979c6?mp_source=share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Upwork"
+                    className={styles.upworkText}
                 >
-                Upwork
+                    Upwork
                 </a>
 
                 <a
-                href="mailto:mahnoor.faisal.h@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Email"
+                    href="mailto:mahnoor.faisal.h@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Email"
                 >
-                <FaEnvelope />
+                    <FaEnvelope />
                 </a>
+                </div>
             </div>
         </section>
+
     );
 }
 

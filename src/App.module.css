@@ -3,8 +3,8 @@
 .App {
     background-color: var(--color-text);
     width: 100vw;
-    min-height: 100vh;
-    height: auto;      
+    min-height: auto !important;
+    height: auto !important;     
     overflow-x:hidden;
     overflow-y: auto;
 }

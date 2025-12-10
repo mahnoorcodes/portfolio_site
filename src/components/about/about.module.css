@@ -83,3 +83,8 @@
         margin-bottom: 0.5rem;
     }
 }
+
+:global(section#about) {
+    min-height: auto !important;
+    height: auto !important;
+}
