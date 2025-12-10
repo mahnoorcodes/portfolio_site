@@ -161,6 +161,15 @@ to {
     opacity: 1;
 }
 }
+.splineDesktop {
+    display: block;
+    }
+
+.splineMobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    }
 
 /* Responsive: stack for mobile */
 @media (max-width: 480px) {
@@ -191,17 +200,11 @@ to {
         font-size: 1rem;
     }
 
-
-    .splineSection {
-        width: 100%;
-        margin-top: 2rem;
-        max-width: 100%;
+    .splineDesktop {
+        display: none;
     }
 
-    .splineSection > div,
-    .splineSection > iframe,
-    .splineSection > canvas {
-        width:100%;
-        height:100%;
+    .splineMobile {
+        display: block;
     }
 }

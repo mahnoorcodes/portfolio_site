@@ -5,16 +5,6 @@ import Spline from '@splinetool/react-spline';
 
 export const Hero = () => {
   const titleRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [hydrated, setHydrated] = useState(false); // new
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 480);
-    handleResize(); // initial check
-    window.addEventListener('resize', handleResize);
-    setHydrated(true); // client render complete
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   useEffect(() => {
     const elements = [titleRef.current];
@@ -96,22 +86,18 @@ export const Hero = () => {
       </div>
 
       {/* Right Column */}
-      {hydrated && (
-        <div className={styles.splineSection}>
-          {isMobile ? (
-            <img
-              src="./assets/staticvoxelspline.jpg"
-              alt="3D model preview"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          ) : (
-            <Spline
-              scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
-              style={{ width: '100%', height: '100%', maxHeight: '100%' }}
-            />
-          )}
-        </div>
-      )}
+      <div className={styles.splineSection}> 
+  <Spline
+    scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
+    className={styles.splineDesktop}
+    style={{ width: '100%', height: '100%' }}
+  />
+  <img
+    src="./assets/staticvoxelspline.jpg"
+    alt="3D model preview"
+    className={styles.splineMobile}
+  />
+      </div>
     </section>
   );
 };
