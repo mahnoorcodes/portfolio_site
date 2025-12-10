@@ -1,16 +1,18 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect , useState} from 'react';
 import { FaDownload, FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import styles from './hero.module.css';
 import Spline from '@splinetool/react-spline';
 
 export const Hero = () => {
   const titleRef = useRef(null);
-  const [isMobile, setIsMobile] = React.useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [hydrated, setHydrated] = useState(false); // new
 
-    useEffect(() => {
+  useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 480);
     handleResize(); // initial check
     window.addEventListener('resize', handleResize);
+    setHydrated(true); // client render complete
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -94,20 +96,22 @@ export const Hero = () => {
       </div>
 
       {/* Right Column */}
-      <div className={styles.splineSection}>
-        {isMobile ? (
-          <img
-            src="./assets/staticvoxelspline.jpg" 
-            alt="3D model preview"
-            style={{ width: '100%', height: 'auto' }}
-          />
-        ) : (
-          <Spline
-            scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
-            style={{ width: '100%', height: '100%', maxHeight: '100%' }}
-          />
-        )}
-      </div>
+      {hydrated && (
+        <div className={styles.splineSection}>
+          {isMobile ? (
+            <img
+              src="./assets/staticvoxelspline.jpg"
+              alt="3D model preview"
+              style={{ width: '100%', height: 'auto' }}
+            />
+          ) : (
+            <Spline
+              scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
+              style={{ width: '100%', height: '100%', maxHeight: '100%' }}
+            />
+          )}
+        </div>
+      )}
     </section>
   );
 };
