@@ -163,7 +163,7 @@ to {
 }
 
 /* Responsive: stack for mobile */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 .heroSection {
     flex-direction: column;
     align-items: center;
@@ -184,7 +184,7 @@ to {
 }
 
 .heroTitle {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .heroDescription {

@@ -70,13 +70,17 @@
   border-bottom: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .aboutContent .row {
         flex-direction: column;
         text-align: center;
     }
+    .aboutContent .row p {
+        flex-direction: column;
+        text-align: center;
+    }
     .aboutTitle {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .rowIcon {

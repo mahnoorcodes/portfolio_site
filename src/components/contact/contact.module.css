@@ -79,7 +79,7 @@
 
 
 /* Mobile responsive layout */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .contactSection {
         flex-direction: column;
         align-items: center;
@@ -89,7 +89,7 @@
     }
 
     .title {
-        font-size: 1.6rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
     }

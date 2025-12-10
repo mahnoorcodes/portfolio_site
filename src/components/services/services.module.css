@@ -62,9 +62,9 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 480px) {
     .servicesTitle{
-        font-size:1.6rem;
+        font-size: 1.3rem;
     }
     .servicesContent {
         flex-direction: column;
