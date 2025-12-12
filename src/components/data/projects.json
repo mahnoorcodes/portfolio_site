@@ -1,5 +1,19 @@
 [
     {
+        "title": "ICE Ride - A US Based Ride-share  Website",
+        "imageSrc": "images/iceride.png",
+        "description": "ICERide.io is a ride-share website for the same name app that connects drivers with passengers looking for a convenient and affordable way to travel. The website is built using WordPress and Elementor, providing a user-friendly interface and seamless experience for both drivers and passengers.",
+        "skills": ["WordPress", "Elementor", "JavaScript", "PHP", "CSS"],
+        "liveDemo": "https://iceride.io/"
+    },
+    {
+        "title": "ICE Drop - A Sub-Service Website for ICE Ride",
+        "imageSrc": "images/icedrop.png",
+        "description": "ICEDrop.io is a sub-service website for the same name app that complements ICE Ride. The website is built using WordPress and Elementor, providing a user-friendly interface and seamless experience for customers and delivery drivers.",
+        "skills": ["WordPress", "Elementor", "JavaScript", "PHP", "CSS"],
+        "liveDemo": "https://icedrop.io/"
+    },
+    {
         "title": "SupportSpace - A Mental Health Support App",
         "imageSrc": "images/supportspace.png",
         "description": "SupportSpace is a mobile mental health support application designed to provide users with accessible and personalised emotional support through advanced technology. This application has multiple features ranging from a personal journal to a mood tracker. It leverages SQLite for offline storage and Google Firebase for secure backend services.",
