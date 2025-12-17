@@ -1,7 +1,7 @@
 :root {
     --navbar-height: 90px; 
-    --spline-scale: 0.66;     
-    --spline-padding: 1.25rem;
+    --spline-scale: 0.86;     
+    --spline-padding: 0.5rem;
 }
 .heroSection {
     display: flex;
@@ -10,10 +10,11 @@
     justify-content: center;
     width: 100%;
     min-height: 100vh !important;               
-    padding: 0 5%;                   
+    padding: 2rem ;                   
     box-sizing: border-box;
     gap: 2rem;
     padding-top:80px;
+
 }
 
 .heroContainer {
@@ -25,7 +26,7 @@
     justify-content: center;
     align-items: center;      
     text-align: center;      
-    color: var(--color-text);
+    color: var(--color-text);    max-width: 50%;
 }
 
 .heroText {
@@ -122,38 +123,25 @@
 }
 
 .splineSection {
-    position: relative;           
-    display: block;
+    position: relative;
     width: 100%;
-    max-width: 480px;             
-    height: auto;
-    min-height: 360px;
+    max-width: 480px; 
+    aspect-ratio: 1; 
     margin: 0 auto;
-    padding: var(--spline-padding);
-    overflow: visible;            
-    box-sizing: border-box;
-    pointer-events: auto;
+    padding: 0;
+    overflow: hidden;
 }
 
 .splineSection > div,
 .splineSection canvas {
     position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform-origin: center center !important;
-    width: 160% !important;
-    height: 160% !important;
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 160% !important;
-    min-height: 160% !important;
-
+    top: 50%;
+    left: 50%;
+    width: 100% !important;      
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
     transform: translate(-50%, -50%) scale(var(--spline-scale)) !important;
-
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    pointer-events: auto;
 }
 
 @keyframes fadeIn {
