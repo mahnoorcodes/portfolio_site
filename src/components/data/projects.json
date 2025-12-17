@@ -9,7 +9,7 @@
     {
         "title": "ICE Drop - A Sub-Service Website for ICE Ride",
         "imageSrc": "images/icedrop.png",
-        "description": "ICEDrop.io is a sub-service website for the same name app that complements ICE Ride. The website is built using WordPress and Elementor, providing a user-friendly interface and seamless experience for customers and delivery drivers.",
+        "description": "ICEDrop.io is a sub-service website that complements ICE Ride. The website is built using WordPress and Elementor, providing a user-friendly interface and seamless experience for customers and delivery drivers.",
         "skills": ["WordPress", "Elementor", "JavaScript", "PHP", "CSS"],
         "liveDemo": "https://icedrop.io/"
     },

@@ -23,24 +23,28 @@ export const Projects = () => {
       }, []);
       
   const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
 
-        responsive: [
-      {
-        breakpoint: 480, 
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+      autoplay: true,       
+      autoplaySpeed: 2500,   
+
+      pauseOnHover: true,   
+      pauseOnFocus: true,  
+
+      responsive: [
+          {
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 1,
+          },
+          },
+      ],
   };
+
 
   return (
     <section className={styles.projectSection} id="projects">

@@ -43,6 +43,13 @@ const sliderSettings = {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    
+    autoplay: true,       
+    autoplaySpeed: 2500,   
+
+    pauseOnHover: true,   
+    pauseOnFocus: true,  
+    
     responsive: [
         {
         breakpoint: 768,
