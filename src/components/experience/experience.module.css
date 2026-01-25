@@ -120,8 +120,20 @@
     margin-top: 0.5rem;
     font-family: var(--font-open-sans);
     color: var(--color-text);
+        overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    transition: all 0.6s ease;
+    max-height: 6em;
+    transition: max-height 0.6s ease, -webkit-line-clamp 0.6s ease; 
 }
-
+.timelineContent:hover p {
+    -webkit-line-clamp: unset;
+    max-height: 1000px;
+    overflow: visible;
+}
 /* Mobile Responsive */
 @media (max-width: 480px) {
     .title {

@@ -2,10 +2,16 @@
 "Languages": [
     { "title": "JavaScript" },
     { "title": "Java" },
-    { "title": "Python" },
     { "title": "C#" },
-    { "title": "SQL" },
-    { "title": "PHP" }
+    { "title": "PHP" },
+    { "title": "SQL" }
+],
+"Web Development": [
+    { "title": "WordPress" },
+    { "title": "Divi" },
+    { "title": "Elementor" },
+    { "title": "Responsive Design" },
+    { "title": "UI/UX Implementation" }
 ],
 "Frameworks_&_Platforms": [
     { "title": "React" },
@@ -14,29 +20,26 @@
     { "title": "ASP.NET" },
     { "title": "Expo Go" }
 ],
-"Databases": [
+"Databases_&_Authentication": [
     { "title": "MSSQL" },
     { "title": "SQLDeveloper" },
     { "title": "Firebase" },
-    { "title": "Docker" }
+    { "title": "Docker" },
+    { "title": "Google OAuth" }
 ],
 "AI_&_Assistants": [
     { "title": "ChatGPT" },
-    { "title": "GitHub Copilot" },
-    { "title": "Chat with Z.ai" }
+    { "title": "GitHub Copilot" }
 ],
 "Tools_&_IDEs": [
     { "title": "VSCode" },
     { "title": "Android Studio" },
     { "title": "Cursor" },
+    { "title": "Vite" },
     { "title": "Excel" },
     { "title": "Photoshop" },
     { "title": "Figma" },
-    { "title": "WordPress" },
-    { "title": "Elementor" },
-    { "title": "Divi" },
     { "title": "Git" },
-    { "title": "GitHub" },
-    { "title": "GitLab" }
+    { "title": "GitHub" }
 ]
 }
