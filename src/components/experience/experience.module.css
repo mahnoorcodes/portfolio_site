@@ -125,14 +125,15 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    transition: all 0.6s ease;
-    max-height: 6em;
-    transition: max-height 0.6s ease, -webkit-line-clamp 0.6s ease; 
+    max-height: 6em;            
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 0.9;
 }
 .timelineContent:hover p {
-    -webkit-line-clamp: unset;
-    max-height: 1000px;
-    overflow: visible;
+    display: block;              
+    -webkit-line-clamp: unset; 
+    max-height: 100%;          
+    opacity: 1;
 }
 /* Mobile Responsive */
 @media (max-width: 480px) {
