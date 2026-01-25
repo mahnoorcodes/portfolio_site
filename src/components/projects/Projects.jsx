@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import styles from './projects.module.css'
 import projects from "../data/projects.json";
 import { ProjectsCard } from './ProjectsCard';
-import Slider from 'react-slick';
 
 export const Projects = () => {
   const titleRef = useRef(null);
@@ -21,43 +20,20 @@ export const Projects = () => {
   
           observer.observe(el);
       }, []);
-      
-  const sliderSettings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-
-      autoplay: true,       
-      autoplaySpeed: 2500,   
-
-      pauseOnHover: true,   
-      pauseOnFocus: true,  
-
-      responsive: [
-          {
-          breakpoint: 768,
-          settings: {
-              slidesToShow: 1,
-          },
-          },
-      ],
-  };
-
 
   return (
     <section className={styles.projectSection} id="projects">
       <h1 ref={titleRef} className={styles.title}>PROJECTS</h1>
-      <Slider {...sliderSettings}>
+      
+      <div className={styles.projects}>
         {projects.map((project, id) => {
           return (
-            <div key={id} className={styles.projectSlide}>
+            <div key={id} className={styles.projectBox}>
               <ProjectsCard {...project} />
             </div>
           );
         })}
-      </Slider>
+      </div>
     </section>
   );
 };
