@@ -1,8 +1,6 @@
 {
 "Languages": [
     { "title": "JavaScript" },
-    { "title": "Java" },
-    { "title": "C#" },
     { "title": "PHP" },
     { "title": "SQL" }
 ],
@@ -16,28 +14,16 @@
 "Frameworks_&_Platforms": [
     { "title": "React" },
     { "title": "React Native" },
-    { "title": "Node.js" },
-    { "title": "ASP.NET" },
-    { "title": "Expo Go" }
+    { "title": "Node.js" }
 ],
 "Databases_&_Authentication": [
-    { "title": "MSSQL" },
-    { "title": "SQLDeveloper" },
     { "title": "Firebase" },
     { "title": "Docker" },
     { "title": "Google OAuth" }
 ],
-"AI_&_Assistants": [
-    { "title": "ChatGPT" },
-    { "title": "GitHub Copilot" }
-],
 "Tools_&_IDEs": [
     { "title": "VSCode" },
-    { "title": "Android Studio" },
-    { "title": "Cursor" },
     { "title": "Vite" },
-    { "title": "Excel" },
-    { "title": "Photoshop" },
     { "title": "Figma" },
     { "title": "Git" },
     { "title": "GitHub" }

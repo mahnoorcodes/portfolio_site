@@ -9,25 +9,27 @@ import creativewritingcert from '../../assets/creativewritingcert.jpg';
 import onemillcert from '../../assets/onemillcert.jpg';
 import pythcert from '../../assets/pythcert.jpg';
 import figmacert from '../../assets/figmacert.jpg'
+import webdescert from '../../assets/webdescert.jpg'
+import jscert from '../../assets/jscert.jpg'
 
 const certificates = [
     {
-        title: "Introduction to Game Design- California Institute of the Arts",
+        title: "Introduction to Game Design",
         date: "Issued Mar 2021",
         image: gamedesigncert
     },
     {
-        title: "Creative Writing: The Craft of Plot- Wesleyan University",
+        title: "Creative Writing: The Craft of Plot",
         date: "Issued Mar 2021",
         image: creativewritingcert
     },
     {
-        title: "1 Million Prompters- DUBAI FUTURE FOUNDATION",
+        title: "1 Million Prompters",
         date:"Issued Jan 2025",
         image: onemillcert
     },
     {
-        title: "Learning Python (2021)- LinkedIn Learning",
+        title: "Learning Python",
         date:"Issued Apr  2025",
         image: pythcert
     },
@@ -36,12 +38,22 @@ const certificates = [
         date:"Issued May  2025",
         image: figmacert
     },
+    {
+        title: "Introduction to Web Design and Development",
+        date:"Issued Jan 2026",
+        image: webdescert
+    },
+    {
+        title: "Hands-On introduction to JavaScript",
+        date:"Issued Jan 2026",
+        image: jscert
+    }
 ];
 const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     
     autoplay: true,       

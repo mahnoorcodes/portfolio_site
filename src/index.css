@@ -11,7 +11,7 @@ html{
 section{
     scroll-margin-top: 80px;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     background: url('./assets/portfoliobg2.png') no-repeat center center fixed;
     background-size: cover;
