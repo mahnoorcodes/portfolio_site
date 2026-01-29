@@ -23,7 +23,6 @@
     align-items: flex-start;
     text-align: left;
     color: var(--color-text);
-    border: 1px solid red;
 }
 .heroText {
     display: flex;
@@ -196,25 +195,42 @@ to {
         justify-content: center;
         padding-top: 6.5rem;
         padding-bottom: 2rem;
+        gap: 1.5rem; 
     }
 
     .heroContainer {
         max-width: 92%;
         padding: 1.5rem;
-        align-items: center;
-        text-align: center;
+        align-items: center;  
+        text-align: center;    
     }
 
     .heroText {
+        flex-direction: column;
+        align-items: center;  
         text-align: center;
+        gap: 1rem;
     }
 
     .heroTitle {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
-    .heroDescription {
+    .heroName {
+        font-size: 2.2rem;
+    }
+
+    .heroSubtitle {
         font-size: 1rem;
+    }
+
+    .downloadBtn {
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .socialIcons {
+        justify-content: center;
+        margin-top: 1rem;
     }
 
     .splineDesktop {
@@ -223,10 +239,9 @@ to {
 
     .splineMobile {
         display: block;
-        align-items: center;
-        justify-content: center;
         margin: 0 auto;
-        width: 50%;
+        width: 60%;   
         height: auto;
     }
 }
+
