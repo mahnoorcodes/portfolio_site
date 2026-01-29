@@ -51,7 +51,9 @@
 .cvLink {
     animation: float 2s ease-in-out infinite;
 }
-
+.cvLink:hover {
+    background-color: var(--color-primary);
+}
 @media (max-width: 480px) {
     .title {
         font-size: 1.3rem;

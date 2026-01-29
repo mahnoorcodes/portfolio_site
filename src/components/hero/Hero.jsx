@@ -27,16 +27,29 @@ export const Hero = () => {
   
   return (
     <section id="hero" className={styles.heroSection}>
-      {/* Left Column */}
+    {/* Left Column */}
+      <div className={styles.splineSection}> 
+        <div className={styles.splineWrapper}>
+          <Spline
+            scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
+            className={styles.splineDesktop}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </div>
+        <img
+          src={staticVoxelImage}
+          alt="3D model preview"
+          className={styles.splineMobile}
+        />
+      </div>
+      {/* Right Column */}
       <div className={styles.heroContainer}>
         <div className={styles.heroText}>
           <h1 ref={titleRef} className={styles.heroTitle}>
-            Hello World!
+            console.log("Hello World");
           </h1>
-          <p className={styles.heroDescription}>
-            I'm Mahnoor Faisal <br />
-            Web Developer | Front-End Developer | UI/UX Enthusiast | Problem Solver
-          </p>
+          <h1 className={styles.heroName}>Mahnoor Faisal</h1>
+          <p className={styles.heroSubtitle}>Front-End Developer • UI/UX Enthusiast</p>
           <a
             href="https://docs.google.com/document/d/1EoF3uQ2ADoFM8KLTveH_Rdi29of-D_eGV4BRjfF_Of4/edit?usp=sharing"
             target="_blank"
@@ -85,20 +98,6 @@ export const Hero = () => {
             </a>
           </div>
         </div>       
-      </div>
-
-      {/* Right Column */}
-      <div className={styles.splineSection}> 
-  <Spline
-    scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
-    className={styles.splineDesktop}
-    style={{ width: '100%', height: '100%' }}
-  />
-  <img
-    src={staticVoxelImage}
-    alt="3D model preview"
-    className={styles.splineMobile}
-  />
       </div>
     </section>
   );
