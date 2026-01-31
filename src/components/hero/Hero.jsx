@@ -27,18 +27,19 @@ export const Hero = () => {
   
   return (
     <section id="hero" className={styles.heroSection}>
-    {/* Left Column */}
-      <div className={styles.splineSection}> 
+      {/* Left Column – Spline */}
+      <div className={styles.splineSection}>
         <div className={styles.splineWrapper}>
           <Spline
             scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
             className={styles.splineDesktop}
-            style={{ width: '100%', height: '100%' }}
           />
         </div>
+
+        {/* Mobile fallback */}
         <img
           src={staticVoxelImage}
-          alt="3D model preview"
+          alt="3D character preview"
           className={styles.splineMobile}
         />
       </div>

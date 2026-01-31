@@ -1,6 +1,6 @@
 :root {
     --navbar-height: 90px; 
-    --spline-scale: 0.86;     
+    --spline-scale: 1;
     --spline-padding: 0.5rem;
 }
 .heroSection {
@@ -145,9 +145,7 @@
 .splineSection {
     flex: 0 0 40%;
     max-width: 40%;
-    aspect-ratio: 1;
-    position: relative;
-    overflow: hidden;
+    min-height: 640px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,10 +164,8 @@
 .splineWrapper > canvas {
     width: 100% !important;
     height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    transform: scale(var(--spline-scale)) !important;
-    position: relative !important; 
+    max-width: none !important;
+    max-height: none !important;
 }
 
 @keyframes fadeIn {
