@@ -1,4 +1,4 @@
-import React, { useRef, useEffect , useState} from 'react';
+import { useRef, useEffect} from 'react';
 import { FaDownload, FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import styles from './hero.module.css';
 import Spline from '@splinetool/react-spline';
@@ -6,6 +6,7 @@ import staticVoxelImage from '../../assets/staticvoxelspline.png';
 
 
 export const Hero = () => {
+  
   const titleRef = useRef(null);
 
   useEffect(() => {
@@ -31,16 +32,15 @@ export const Hero = () => {
       <div className={styles.splineSection}>
         <div className={styles.splineWrapper}>
           <Spline
-            scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"
+            scene="https://prod.spline.design/vrT9UN2wYeLdGY2R/scene.splinecode"    
             className={styles.splineDesktop}
           />
         </div>
-
         {/* Mobile fallback */}
         <img
           src={staticVoxelImage}
           alt="3D character preview"
-          className={styles.splineMobile}
+          className={styles.splineImage}
         />
       </div>
       {/* Right Column */}
