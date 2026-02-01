@@ -16,7 +16,7 @@
     padding: 2rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     color: var(--color-text);
 }
@@ -188,10 +188,11 @@ to {
     }
 
     .heroContainer {
-        max-width: 92%;
-        padding: 1.5rem;
+        max-width: 90%;
+        padding: 1.2rem;
         align-items: center;  
-        text-align: center;    
+        text-align: center;
+            
     }
 
     .heroText {
@@ -232,7 +233,7 @@ to {
         height: 60vh;     
         object-fit: cover;  
         margin: 0; 
-        padding-bottom: 0;        
+        padding: 0;        
     }
 }
 
