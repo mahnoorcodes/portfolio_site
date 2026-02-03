@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef , useState , useEffect} from 'react';
 import styles from './App.module.css';
 import { Navbar } from './components/navbar/Navbar.jsx';
 import { Hero } from './components/hero/Hero.jsx';
@@ -9,8 +9,11 @@ import {Cv} from './components/cv/Cv.jsx';
 import { Contact } from './components/contact/Contact.jsx';
 import {Experience} from './components/experience/Experience.jsx';
 import {Services} from './components/services/Services.jsx';
+import Loader from './components/loader.jsx';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -19,6 +22,14 @@ function App() {
   const experienceRef = useRef(null);
   const servicesRef = useRef(null);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true); 
+      setTimeout(() => setLoading(false), 500);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -26,7 +37,14 @@ function App() {
   };
 
   return (
-    <div className={styles.App}>
+    <>
+    {loading && <Loader fadeOut={fadeOut} />}
+      <div
+        className={`${styles.App} ${
+          !loading ? styles.appVisible : styles.appHidden
+        }`}
+      >
+
       <Navbar onScrollTo={scrollToSection} refs={{servicesRef, aboutRef, skillsRef , projectsRef, cvRef, contactRef, experienceRef}} />
 
       <Hero onScrollTo={scrollToSection} refs={{servicesRef, aboutRef, skillsRef , projectsRef, cvRef, contactRef, experienceRef}} />
@@ -60,6 +78,7 @@ function App() {
       </section>
 
     </div>
+    </>
   );
 }
 

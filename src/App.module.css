@@ -8,3 +8,11 @@
     overflow-x:hidden;
     overflow-y: auto;
 }
+.appHidden {
+    opacity: 0;
+}
+
+.appVisible {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}

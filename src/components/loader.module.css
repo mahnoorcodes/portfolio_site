@@ -1,0 +1,54 @@
+.loaderOverlay {
+  position: fixed;
+  inset: 0;
+  background: url('./assets/portfoliobg2.png') no-repeat center center fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; 
+}
+
+.pixelHeart {
+  animation: pulse 1.4s infinite steps(3);
+  transform-origin: center;
+  image-rendering: pixelated;
+}
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.loadingText {
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.loadingText::after {
+  content: "";
+  animation: dots 1.5s steps(3) infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}

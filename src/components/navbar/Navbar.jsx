@@ -15,12 +15,18 @@ export const Navbar = ({ onScrollTo, refs }) => {
     };
 
     return(
+        <>
+        <div
+            className={styles.navbarTitle}
+            onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.history.pushState("", document.title, window.location.pathname);
+            }}
+        >
+            MAHNOOR FAISAL
+        </div>
+
         <nav className={styles.navbar}>
-            <div className={styles.logoContainer}>
-                <li className={styles.navbarTitle} onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" });window.history.pushState("", document.title, window.location.pathname);}}>
-                    MAHNOOR FAISAL
-                </li>
-            </div>
                 <FontAwesomeIcon icon={faBars} className={styles.menuIcon} onClick= {toggleMenu} alt="menu" />
 
             <ul className={`${styles.navbarMenu} ${menuOpen ? styles.show : ''}`}>
@@ -32,5 +38,6 @@ export const Navbar = ({ onScrollTo, refs }) => {
                 <li onClick={() => handleNavClick(refs.contactRef)}>Contact Me</li>
             </ul>
         </nav>
+        </>
     );
 };

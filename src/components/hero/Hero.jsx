@@ -47,9 +47,9 @@ export const Hero = () => {
       <div className={styles.heroContainer}>
         <div className={styles.heroText}>
           <h1 ref={titleRef} className={styles.heroTitle}>
-            console.log("Hello World");
+            console.log("Hello Im MAHNOOR");
           </h1>
-          <h1 className={styles.heroName}>Mahnoor Faisal</h1>
+
           <p className={styles.heroSubtitle}>Front-End Developer • UI/UX Enthusiast</p>
           <a
             href="https://docs.google.com/document/d/1EoF3uQ2ADoFM8KLTveH_Rdi29of-D_eGV4BRjfF_Of4/edit?usp=sharing"

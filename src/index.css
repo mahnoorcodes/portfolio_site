@@ -6,7 +6,8 @@
     
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
+    background: url('./assets/portfoliobg2.png') no-repeat center center fixed;
 }
 section{
     scroll-margin-top: 80px;
