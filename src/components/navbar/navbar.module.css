@@ -98,7 +98,6 @@
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        pointer-events: none;
         transition:
             opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
             transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
